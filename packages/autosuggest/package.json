@@ -1,0 +1,52 @@
+{
+  "name": "@reactai/autosuggest",
+  "version": "1.0.0",
+  "description": "AI-powered smart suggestions component for React",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./dist/autosuggest.css": "./dist/autosuggest.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "vite build --watch"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "dependencies": {
+    "@reactai/core": "*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10",
+    "vite-plugin-dts": "^3.7.0"
+  },
+  "keywords": [
+    "react",
+    "autosuggest",
+    "autocomplete",
+    "ai",
+    "suggestions",
+    "search"
+  ],
+  "author": "reachbrt",
+  "license": "MIT",
+  "sideEffects": [
+    "*.css"
+  ]
+}
+

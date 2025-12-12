@@ -1,0 +1,2 @@
+export { useSmartValidation } from './useSmartValidation';
+

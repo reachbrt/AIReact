@@ -1,0 +1,57 @@
+{
+  "name": "@reactai/chatbot",
+  "version": "1.0.0",
+  "description": "Enterprise AI chatbot component for React with multi-provider support",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./dist/chatbot.css": "./dist/chatbot.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "vite build --watch"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "dependencies": {
+    "@reactai/core": "*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10",
+    "vite-plugin-dts": "^3.7.0"
+  },
+  "keywords": [
+    "react",
+    "chatbot",
+    "ai",
+    "openai",
+    "gpt",
+    "conversational-ai",
+    "chat-component"
+  ],
+  "author": "reachbrt",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reachbrt/reactai"
+  },
+  "sideEffects": [
+    "*.css"
+  ]
+}
+

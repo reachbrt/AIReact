@@ -1,0 +1,52 @@
+{
+  "name": "reactai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ReactAI - AI-powered React components for building intelligent applications",
+  "author": "reachbrt",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reachbrt/reactai"
+  },
+  "workspaces": [
+    "packages/*",
+    "demo"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace demo",
+    "build": "npm run build:packages && npm run build:demo",
+    "build:packages": "npm run build --workspace @reactai/core && npm run build --workspace @reactai/chatbot && npm run build --workspace @reactai/autosuggest && npm run build --workspace @reactai/smartform && npm run build --workspace @reactai/analytics",
+    "build:demo": "npm run build --workspace demo",
+    "build:core": "npm run build --workspace @reactai/core",
+    "build:chatbot": "npm run build --workspace @reactai/chatbot",
+    "build:autosuggest": "npm run build --workspace @reactai/autosuggest",
+    "build:smartform": "npm run build --workspace @reactai/smartform",
+    "build:analytics": "npm run build --workspace @reactai/analytics",
+    "publish:packages": "npm run build:packages && npm publish --access public --workspaces --workspace packages",
+    "clean": "rm -rf packages/*/dist demo/dist node_modules/.cache"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "react",
+    "ai",
+    "openai",
+    "chatbot",
+    "components",
+    "typescript",
+    "gpt",
+    "claude",
+    "gemini"
+  ]
+}
+

@@ -1,0 +1,279 @@
+/**
+ * @reactai/smartform - Styles
+ *
+ * Color Palette (Purple theme matching ReactAI):
+ * Primary: #667eea (indigo), #764ba2 (purple)
+ * Background: #ffffff (light), #1a1a2e (dark)
+ * Text: #1f2937 (light), #e2e8f0 (dark)
+ */
+
+.reactai-smart-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 500px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.reactai-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.reactai-form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease;
+}
+
+.reactai-smart-form.dark .reactai-form-label {
+  color: #e2e8f0;
+}
+
+.reactai-required {
+  color: #ef4444;
+  margin-left: 2px;
+}
+
+.reactai-form-input {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #ffffff;
+  font-family: inherit;
+  color: #1f2937;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.reactai-form-input:hover {
+  border-color: #c7d2fe;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.08);
+}
+
+.reactai-form-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15), 0 2px 8px rgba(102, 126, 234, 0.1);
+  transform: translateY(-1px);
+}
+
+.reactai-form-input::placeholder {
+  color: #9ca3af;
+  transition: color 0.2s ease;
+}
+
+.reactai-form-input:focus::placeholder {
+  color: #a5b4c4;
+}
+
+/* Dark mode form input */
+.reactai-smart-form.dark .reactai-form-input {
+  background: #2d2d44;
+  border-color: #3d3d5c;
+  color: #e2e8f0;
+}
+
+.reactai-smart-form.dark .reactai-form-input:hover {
+  border-color: #5d5d7c;
+}
+
+.reactai-smart-form.dark .reactai-form-input:focus {
+  border-color: #818cf8;
+  box-shadow: 0 0 0 4px rgba(129, 140, 248, 0.2), 0 2px 8px rgba(129, 140, 248, 0.1);
+}
+
+.reactai-smart-form.dark .reactai-form-input::placeholder {
+  color: #6b7280;
+}
+
+.reactai-form-input.error {
+  border-color: #ef4444;
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  animation: inputShake 0.4s ease;
+}
+
+@keyframes inputShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-4px); }
+  40%, 80% { transform: translateX(4px); }
+}
+
+.reactai-form-input.error:focus {
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.15);
+}
+
+.reactai-smart-form.dark .reactai-form-input.error {
+  background: linear-gradient(135deg, #450a0a 0%, #7f1d1d 100%);
+  border-color: #991b1b;
+}
+
+.reactai-form-input:disabled {
+  background: #f9fafb;
+  border-color: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.reactai-smart-form.dark .reactai-form-input:disabled {
+  background: #1a1a2e;
+  border-color: #2d2d44;
+  color: #6b7280;
+}
+
+textarea.reactai-form-input {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.reactai-form-error {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #b91c1c;
+  animation: errorSlide 0.3s ease-out;
+}
+
+@keyframes errorSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reactai-smart-form.dark .reactai-form-error {
+  background: linear-gradient(135deg, #450a0a 0%, #7f1d1d 100%);
+  border-color: #991b1b;
+  color: #fecaca;
+}
+
+.reactai-apply-suggestion {
+  align-self: flex-start;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.reactai-apply-suggestion:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.reactai-apply-suggestion:active {
+  transform: translateY(0);
+}
+
+.reactai-apply-suggestion:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3), 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.reactai-form-submit {
+  width: 100%;
+  padding: 16px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 12px;
+  box-shadow: 0 4px 14px rgba(102, 126, 234, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ripple effect on submit button */
+.reactai-form-submit::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.reactai-form-submit:active:not(:disabled)::before {
+  width: 120%;
+  height: 120%;
+}
+
+.reactai-form-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.45);
+}
+
+.reactai-form-submit:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+}
+
+.reactai-form-submit:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.25), 0 4px 14px rgba(102, 126, 234, 0.35);
+}
+
+.reactai-form-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+  background: linear-gradient(135deg, #9ca3af 0%, #d1d5db 100%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .reactai-smart-form {
+    gap: 20px;
+  }
+
+  .reactai-form-input {
+    padding: 12px 14px;
+    font-size: 16px; /* Prevents iOS zoom */
+    border-radius: 10px;
+  }
+
+  textarea.reactai-form-input {
+    min-height: 100px;
+  }
+
+  .reactai-form-submit {
+    padding: 14px 24px;
+    border-radius: 10px;
+  }
+
+  .reactai-form-error {
+    padding: 10px 14px;
+    border-radius: 8px;
+  }
+}
+
