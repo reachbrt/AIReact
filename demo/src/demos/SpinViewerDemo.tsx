@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { SpinViewer, SpinGenerator, SpinTrigger } from '@aireact/360-spin';
+import { SpinViewer, SpinGenerator } from '@aireact/360-spin';
 
 interface SpinViewerDemoProps {
   apiKey: string;
@@ -28,7 +28,6 @@ type DemoMode = 'viewer' | 'generator';
 export const SpinViewerDemo: React.FC<SpinViewerDemoProps> = ({ apiKey }) => {
   const [mode, setMode] = useState<DemoMode>('generator');
   const [currentFrame, setCurrentFrame] = useState(0);
-  const [trigger, setTrigger] = useState<SpinTrigger>('hover');
   const [frameRate, setFrameRate] = useState(12);
   const [generatedCount, setGeneratedCount] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
