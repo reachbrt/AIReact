@@ -3,13 +3,29 @@ import { ChatbotDemo } from './demos/ChatbotDemo';
 import { AutosuggestDemo } from './demos/AutosuggestDemo';
 import { SmartFormDemo } from './demos/SmartFormDemo';
 import { AnalyticsDemo } from './demos/AnalyticsDemo';
-import { REACTAI_CORE_VERSION } from '@reactai/core';
-import { REACTAI_CHATBOT_VERSION } from '@reactai/chatbot';
-import { REACTAI_AUTOSUGGEST_VERSION } from '@reactai/autosuggest';
-import { REACTAI_SMARTFORM_VERSION } from '@reactai/smartform';
-import { REACTAI_ANALYTICS_VERSION } from '@reactai/analytics';
+import { ImageCaptionDemo } from './demos/ImageCaptionDemo';
+import { EmotionUIDemo } from './demos/EmotionUIDemo';
+import { DocIntelligenceDemo } from './demos/DocIntelligenceDemo';
+import { PredictiveInputDemo } from './demos/PredictiveInputDemo';
+import { SmartNotifyDemo } from './demos/SmartNotifyDemo';
+import { VoiceActionsDemo } from './demos/VoiceActionsDemo';
+import { SmartDataTableDemo } from './demos/SmartDataTableDemo';
+import { SpinViewerDemo } from './demos/SpinViewerDemo';
+import { REACTAI_CORE_VERSION } from '@aireact/core';
+import { REACTAI_CHATBOT_VERSION } from '@aireact/chatbot';
+import { REACTAI_AUTOSUGGEST_VERSION } from '@aireact/autosuggest';
+import { REACTAI_SMARTFORM_VERSION } from '@aireact/smartform';
+import { REACTAI_ANALYTICS_VERSION } from '@aireact/analytics';
+import { REACTAI_IMAGE_CAPTION_VERSION } from '@aireact/image-caption';
+import { REACTAI_EMOTION_UI_VERSION } from '@aireact/emotion-ui';
+import { REACTAI_DOC_INTELLIGENCE_VERSION } from '@aireact/doc-intelligence';
+import { REACTAI_PREDICTIVE_INPUT_VERSION } from '@aireact/predictive-input';
+import { REACTAI_SMART_NOTIFY_VERSION } from '@aireact/smart-notify';
+import { REACTAI_VOICE_ACTIONS_VERSION } from '@aireact/voice-actions';
+import { REACTAI_SMART_DATATABLE_VERSION } from '@aireact/smart-datatable';
+import { REACTAI_360_SPIN_VERSION } from '@aireact/360-spin';
 
-type DemoTab = 'chatbot' | 'autosuggest' | 'smartform' | 'analytics';
+type DemoTab = 'chatbot' | 'autosuggest' | 'smartform' | 'analytics' | 'image-caption' | 'emotion-ui' | 'doc-intelligence' | 'predictive-input' | 'smart-notify' | 'voice-actions' | 'smart-datatable' | '360-spin';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<DemoTab>('chatbot');
@@ -25,6 +41,14 @@ const App: React.FC = () => {
     { id: 'autosuggest', label: 'Autosuggest', icon: '🔍', desc: 'AI-powered smart suggestions with real-time autocomplete.' },
     { id: 'smartform', label: 'Smart Form', icon: '📝', desc: 'Intelligent form validation with AI-powered auto-correction.' },
     { id: 'analytics', label: 'Analytics', icon: '📊', desc: 'AI-powered analytics dashboard with actionable insights.' },
+    { id: 'image-caption', label: 'Image Caption', icon: '🖼️', desc: 'AI image captioning with GPT-4 Vision integration.' },
+    { id: 'emotion-ui', label: 'Emotion UI', icon: '😊', desc: 'Emotion-aware adaptive UI components.' },
+    { id: 'doc-intelligence', label: 'Doc Intelligence', icon: '📄', desc: 'Document OCR & intelligent data extraction.' },
+    { id: 'predictive-input', label: 'Predictive Input', icon: '✨', desc: 'AI predictive text completion.' },
+    { id: 'smart-notify', label: 'Smart Notify', icon: '🔔', desc: 'Smart notifications with priority management.' },
+    { id: 'voice-actions', label: 'Voice Actions', icon: '🎤', desc: 'Voice commands & speech recognition.' },
+    { id: 'smart-datatable', label: 'Smart DataTable', icon: '📋', desc: 'AI-native data tables with NLP queries.' },
+    { id: '360-spin', label: '360 Spin', icon: '🔄', desc: 'Interactive 360° product viewer.' },
   ];
 
   const versions: Record<string, string> = {
@@ -33,6 +57,14 @@ const App: React.FC = () => {
     autosuggest: REACTAI_AUTOSUGGEST_VERSION,
     smartform: REACTAI_SMARTFORM_VERSION,
     analytics: REACTAI_ANALYTICS_VERSION,
+    'image-caption': REACTAI_IMAGE_CAPTION_VERSION,
+    'emotion-ui': REACTAI_EMOTION_UI_VERSION,
+    'doc-intelligence': REACTAI_DOC_INTELLIGENCE_VERSION,
+    'predictive-input': REACTAI_PREDICTIVE_INPUT_VERSION,
+    'smart-notify': REACTAI_SMART_NOTIFY_VERSION,
+    'voice-actions': REACTAI_VOICE_ACTIONS_VERSION,
+    'smart-datatable': REACTAI_SMART_DATATABLE_VERSION,
+    '360-spin': REACTAI_360_SPIN_VERSION,
   };
 
   const currentTab = tabs.find(t => t.id === activeTab);
@@ -162,7 +194,7 @@ const App: React.FC = () => {
             <div className="space-y-3">
               {Object.entries(versions).map(([pkg, version]) => (
                 <div key={pkg} className="flex items-center justify-between py-2 px-4 bg-slate-50 rounded-lg">
-                  <span className="font-medium text-primary-600">@reactai/{pkg}</span>
+                  <span className="font-medium text-primary-600">@aireact/{pkg}</span>
                   <span className="text-sm text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200">
                     v{version}
                   </span>
@@ -177,9 +209,9 @@ const App: React.FC = () => {
               <span className="text-2xl">🚀</span> Quick Start
             </h3>
             <pre className="bg-gradient-to-br from-slate-900 to-slate-800 text-slate-100 p-5 rounded-xl text-sm overflow-x-auto border border-slate-700">
-              <code>{`npm install @reactai/core @reactai/chatbot
+              <code>{`npm install @aireact/core @aireact/chatbot
 
-import { ChatWindow } from '@reactai/chatbot';
+import { ChatWindow } from '@aireact/chatbot';
 
 <ChatWindow
   provider="openai"
@@ -198,7 +230,7 @@ import { ChatWindow } from '@reactai/chatbot';
             <div>
               <h2 className="text-2xl font-bold text-slate-800 flex items-center gap-3">
                 <span className="text-3xl">{currentTab?.icon}</span>
-                @reactai/{activeTab}
+                @aireact/{activeTab}
               </h2>
               <p className="text-slate-500 mt-2 text-lg">{currentTab?.desc}</p>
             </div>
@@ -219,6 +251,14 @@ import { ChatWindow } from '@reactai/chatbot';
               {activeTab === 'autosuggest' && <AutosuggestDemo apiKey={apiKey} />}
               {activeTab === 'smartform' && <SmartFormDemo apiKey={apiKey} />}
               {activeTab === 'analytics' && <AnalyticsDemo apiKey={apiKey} />}
+              {activeTab === 'image-caption' && <ImageCaptionDemo apiKey={apiKey} />}
+              {activeTab === 'emotion-ui' && <EmotionUIDemo apiKey={apiKey} />}
+              {activeTab === 'doc-intelligence' && <DocIntelligenceDemo apiKey={apiKey} />}
+              {activeTab === 'predictive-input' && <PredictiveInputDemo apiKey={apiKey} />}
+              {activeTab === 'smart-notify' && <SmartNotifyDemo apiKey={apiKey} />}
+              {activeTab === 'voice-actions' && <VoiceActionsDemo apiKey={apiKey} />}
+              {activeTab === 'smart-datatable' && <SmartDataTableDemo apiKey={apiKey} />}
+              {activeTab === '360-spin' && <SpinViewerDemo apiKey={apiKey} />}
             </div>
           )}
         </div>

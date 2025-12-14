@@ -1,0 +1,2 @@
+export { useDocumentExtractor } from './useDocumentExtractor';
+

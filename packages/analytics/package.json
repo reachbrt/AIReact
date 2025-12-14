@@ -1,5 +1,5 @@
 {
-  "name": "@reactai/analytics",
+  "name": "@aireact/analytics",
   "version": "1.0.0",
   "description": "AI-powered analytics & insights dashboard for React",
   "type": "module",
@@ -25,7 +25,7 @@
     "react-dom": "^18.0.0"
   },
   "dependencies": {
-    "@reactai/core": "*"
+    "@aireact/core": "*"
   },
   "devDependencies": {
     "@types/react": "^18.2.45",

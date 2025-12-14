@@ -18,12 +18,12 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: ['react', 'react-dom', '@reactai/core'],
+      external: ['react', 'react-dom', '@aireact/core'],
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
-          '@reactai/core': 'ReactAICore',
+          '@aireact/core': 'ReactAICore',
         },
         assetFileNames: 'analytics.[ext]',
       },

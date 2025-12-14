@@ -1,5 +1,5 @@
 {
-  "name": "@reactai/core",
+  "name": "@aireact/core",
   "version": "1.0.0",
   "description": "Core AI functionality for ReactAI - Multi-provider AI client",
   "type": "module",

@@ -3,7 +3,7 @@
  */
 
 import { useState, useCallback, useEffect } from 'react';
-import { useAIClient } from '@reactai/core';
+import { useAIClient } from '@aireact/core';
 import { 
   AnalyticsEvent, 
   AnalyticsMetric, 

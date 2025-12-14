@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AnalyticsDashboard, AnalyticsEvent } from '@reactai/analytics';
+import { AnalyticsDashboard, AnalyticsEvent } from '@aireact/analytics';
 
 interface AnalyticsDemoProps {
   apiKey: string;

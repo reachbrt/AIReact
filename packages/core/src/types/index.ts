@@ -1,5 +1,5 @@
 /**
- * @reactai/core - Type definitions
+ * @aireact/core - Type definitions
  */
 
 export type AIProvider = 'openai' | 'claude' | 'gemini' | 'huggingface' | 'ollama' | 'deepseek' | 'fallback';

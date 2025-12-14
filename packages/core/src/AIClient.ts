@@ -39,7 +39,7 @@ export class AIClient implements AIClientInterface {
 
     // If no API key, use fallback
     if (!config.apiKey && config.provider !== 'fallback') {
-      console.warn(`[@reactai/core] No API key provided for ${config.provider}, using fallback provider`);
+      console.warn(`[@aireact/core] No API key provided for ${config.provider}, using fallback provider`);
       this.config.provider = 'fallback';
     }
   }

@@ -1,0 +1,107 @@
+/**
+ * Document Intelligence Styles
+ */
+
+.reactai-doc-scanner {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  max-width: 500px;
+}
+
+.reactai-doc-dropzone {
+  border: 2px dashed #8B5CF6;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
+  position: relative;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reactai-doc-dropzone:hover, .reactai-doc-dropzone.dragging {
+  border-color: #7C3AED;
+  background: linear-gradient(135deg, #EDE9FE 0%, #DDD6FE 100%);
+}
+
+.reactai-doc-placeholder { color: #6B7280; }
+
+.reactai-doc-icon {
+  width: 48px;
+  height: 48px;
+  color: #8B5CF6;
+  margin-bottom: 12px;
+}
+
+.reactai-doc-preview {
+  max-width: 100%;
+  max-height: 250px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.reactai-doc-loading {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 12px;
+}
+
+.reactai-doc-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #E9D5FF;
+  border-top-color: #8B5CF6;
+  border-radius: 50%;
+  animation: docSpin 1s linear infinite;
+}
+
+@keyframes docSpin { to { transform: rotate(360deg); } }
+
+.reactai-doc-results {
+  margin-top: 16px;
+  padding: 16px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #E9D5FF;
+}
+
+.reactai-doc-results h4 {
+  margin: 0 0 12px;
+  color: #4C1D95;
+  font-size: 14px;
+}
+
+.reactai-doc-field {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.reactai-doc-field:last-child { border-bottom: none; }
+
+.field-name { font-weight: 500; color: #374151; text-transform: capitalize; }
+.field-value { color: #6B7280; }
+.field-confidence { color: #10B981; font-size: 12px; }
+
+/* Dark mode */
+.reactai-doc-scanner.dark .reactai-doc-dropzone {
+  background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+  border-color: #6366F1;
+}
+.reactai-doc-scanner.dark .reactai-doc-results {
+  background: #1F2937;
+  border-color: #374151;
+}
+.reactai-doc-scanner.dark .reactai-doc-results h4 { color: #E9D5FF; }
+.reactai-doc-scanner.dark .field-name { color: #D1D5DB; }
+

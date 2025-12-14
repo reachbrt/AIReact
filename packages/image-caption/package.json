@@ -1,0 +1,52 @@
+{
+  "name": "@aireact/image-caption",
+  "version": "1.0.0",
+  "description": "AI image captioning with GPT-4 Vision for React",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./dist/image-caption.css": "./dist/image-caption.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "vite build --watch"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "dependencies": {
+    "@aireact/core": "*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10",
+    "vite-plugin-dts": "^3.7.0"
+  },
+  "keywords": [
+    "react",
+    "image-caption",
+    "ai",
+    "gpt-4-vision",
+    "accessibility",
+    "alt-text"
+  ],
+  "author": "reachbrt",
+  "license": "MIT",
+  "sideEffects": [
+    "*.css"
+  ]
+}
+

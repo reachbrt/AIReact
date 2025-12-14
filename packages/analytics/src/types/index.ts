@@ -1,8 +1,8 @@
 /**
- * @reactai/analytics - Type definitions
+ * @aireact/analytics - Type definitions
  */
 
-import { AIProvider } from '@reactai/core';
+import { AIProvider } from '@aireact/core';
 
 export interface AnalyticsEvent {
   id: string;

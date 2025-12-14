@@ -1,0 +1,2 @@
+export { useEmotionDetector } from './useEmotionDetector';
+

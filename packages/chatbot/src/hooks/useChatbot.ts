@@ -3,7 +3,7 @@
  */
 
 import { useState, useCallback } from 'react';
-import { useAIClient, Message } from '@reactai/core';
+import { useAIClient, Message } from '@aireact/core';
 import { ChatMessage, UseChatbotOptions, UseChatbotReturn } from '../types';
 
 function generateId(): string {

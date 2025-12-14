@@ -1,5 +1,5 @@
 /**
- * @reactai/analytics
+ * @aireact/analytics
  * AI-powered analytics & insights dashboard for React
  * 
  * @version 1.0.0
@@ -10,7 +10,7 @@
 // Version console log
 const VERSION = '1.0.0';
 console.log(
-  `%c @reactai/analytics v${VERSION} %c Loaded successfully `,
+  `%c @aireact/analytics v${VERSION} %c Loaded successfully `,
   'background: #667eea; color: white; padding: 2px 6px; border-radius: 3px 0 0 3px; font-weight: bold;',
   'background: #764ba2; color: white; padding: 2px 6px; border-radius: 0 3px 3px 0;'
 );

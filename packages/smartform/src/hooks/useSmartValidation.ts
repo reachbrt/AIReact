@@ -3,7 +3,7 @@
  */
 
 import { useState, useCallback } from 'react';
-import { useAIClient } from '@reactai/core';
+import { useAIClient } from '@aireact/core';
 import { FieldError, UseSmartValidationOptions, UseSmartValidationReturn } from '../types';
 
 export function useSmartValidation(options: UseSmartValidationOptions): UseSmartValidationReturn {

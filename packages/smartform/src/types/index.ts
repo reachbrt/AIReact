@@ -1,8 +1,8 @@
 /**
- * @reactai/smartform - Type definitions
+ * @aireact/smartform - Type definitions
  */
 
-import { AIProvider } from '@reactai/core';
+import { AIProvider } from '@aireact/core';
 
 export type FieldType = 'text' | 'email' | 'phone' | 'url' | 'number' | 'date' | 'password' | 'textarea';
 

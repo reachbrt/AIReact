@@ -1,5 +1,5 @@
 {
-  "name": "@reactai/demo",
+  "name": "@aireact/demo",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -9,11 +9,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@reactai/analytics": "*",
-    "@reactai/autosuggest": "*",
-    "@reactai/chatbot": "*",
-    "@reactai/core": "*",
-    "@reactai/smartform": "*",
+    "@aireact/360-spin": "*",
+    "@aireact/analytics": "*",
+    "@aireact/autosuggest": "*",
+    "@aireact/chatbot": "*",
+    "@aireact/core": "*",
+    "@aireact/doc-intelligence": "*",
+    "@aireact/emotion-ui": "*",
+    "@aireact/image-caption": "*",
+    "@aireact/predictive-input": "*",
+    "@aireact/smart-datatable": "*",
+    "@aireact/smart-notify": "*",
+    "@aireact/smartform": "*",
+    "@aireact/voice-actions": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

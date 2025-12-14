@@ -1,8 +1,8 @@
 /**
- * @reactai/autosuggest - Type definitions
+ * @aireact/autosuggest - Type definitions
  */
 
-import { AIProvider } from '@reactai/core';
+import { AIProvider } from '@aireact/core';
 
 export interface Suggestion {
   id: string;

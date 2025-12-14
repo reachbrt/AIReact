@@ -1,0 +1,2 @@
+export { usePredictiveText } from './usePredictiveText';
+

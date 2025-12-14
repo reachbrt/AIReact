@@ -1,0 +1,517 @@
+/**
+ * 360 Spin Styles
+ */
+
+.reactai-spin-viewer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
+  cursor: grab;
+  user-select: none;
+}
+
+.reactai-spin-viewer.dragging {
+  cursor: grabbing;
+}
+
+.reactai-spin-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.1s ease;
+}
+
+.reactai-spin-image.zoomed {
+  cursor: zoom-out;
+}
+
+.reactai-spin-controls {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.reactai-spin-controls button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: #8B5CF6;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.reactai-spin-controls button:hover {
+  background: #7C3AED;
+  transform: scale(1.1);
+}
+
+.reactai-spin-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(139, 92, 246, 0.2);
+}
+
+.reactai-spin-progress-bar {
+  height: 100%;
+  background: #8B5CF6;
+  transition: width 0.1s ease;
+}
+
+.reactai-spin-hint {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 16px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.reactai-spin-viewer:hover .reactai-spin-hint {
+  opacity: 1;
+}
+
+/* Loading state */
+.reactai-spin-viewer.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reactai-spin-loading {
+  text-align: center;
+  color: #7C3AED;
+}
+
+.reactai-spin-loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(139, 92, 246, 0.2);
+  border-top-color: #8B5CF6;
+  border-radius: 50%;
+  animation: reactai-spin 0.8s linear infinite;
+  margin: 0 auto 12px;
+}
+
+.reactai-spin-loading span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Frame indicator */
+.reactai-spin-frame-indicator {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.reactai-spin-viewer:hover .reactai-spin-frame-indicator {
+  opacity: 1;
+}
+
+/* Zoomed state cursor */
+.reactai-spin-viewer.zoomed {
+  cursor: zoom-out;
+}
+
+/* Dark mode */
+.reactai-spin-viewer.dark {
+  background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+}
+
+.reactai-spin-viewer.dark .reactai-spin-loading {
+  color: #C4B5FD;
+}
+
+.reactai-spin-viewer.dark .reactai-spin-loading-spinner {
+  border-color: rgba(196, 181, 253, 0.2);
+  border-top-color: #C4B5FD;
+}
+
+.reactai-spin-viewer.dark .reactai-spin-controls {
+  background: rgba(31, 41, 55, 0.9);
+}
+
+/* ========================================
+   Spin Generator Styles
+   ======================================== */
+
+.reactai-spin-generator {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.reactai-spin-generator-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.reactai-spin-generator-header h3 {
+  margin: 0;
+  color: #7C3AED;
+  font-size: 18px;
+}
+
+.reactai-spin-reset-btn {
+  padding: 8px 16px;
+  background: #8B5CF6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.reactai-spin-reset-btn:hover {
+  background: #7C3AED;
+}
+
+.reactai-spin-file-input {
+  display: none;
+}
+
+.reactai-spin-upload-zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px dashed #C4B5FD;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.reactai-spin-upload-zone:hover {
+  border-color: #8B5CF6;
+  background: linear-gradient(135deg, #EDE9FE 0%, #DDD6FE 100%);
+}
+
+.reactai-spin-upload-content {
+  text-align: center;
+  padding: 40px;
+}
+
+.reactai-spin-upload-icon {
+  font-size: 64px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.reactai-spin-upload-content h3 {
+  margin: 0 0 8px 0;
+  color: #5B21B6;
+  font-size: 20px;
+}
+
+.reactai-spin-upload-content p {
+  margin: 0;
+  color: #7C3AED;
+  font-size: 14px;
+}
+
+.reactai-spin-upload-hint {
+  margin-top: 8px !important;
+  color: #A78BFA !important;
+  font-size: 12px !important;
+}
+
+.reactai-spin-preview {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #F5F3FF;
+}
+
+.reactai-spin-preview-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.reactai-spin-preview-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
+}
+
+.reactai-spin-generating-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(91, 33, 182, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reactai-spin-generating-content {
+  text-align: center;
+  color: white;
+}
+
+.reactai-spin-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: reactai-spin 1s linear infinite;
+  margin: 0 auto 16px;
+}
+
+@keyframes reactai-spin {
+  to { transform: rotate(360deg); }
+}
+
+.reactai-spin-generating-content p {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.reactai-spin-step {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  opacity: 0.95;
+}
+
+.reactai-spin-progress-container {
+  width: 240px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.reactai-spin-progress-fill {
+  height: 100%;
+  background: white;
+  transition: width 0.3s;
+}
+
+.reactai-spin-progress-text {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.reactai-spin-preview-thumbnails {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+.reactai-spin-thumb {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.reactai-spin-error {
+  padding: 12px 16px;
+  background: #FEE2E2;
+  color: #DC2626;
+  font-size: 14px;
+}
+
+.reactai-spin-options {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background: #F9FAFB;
+  border-top: 1px solid #E5E7EB;
+}
+
+.reactai-spin-option-group {
+  flex: 1;
+}
+
+.reactai-spin-option-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6B7280;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.reactai-spin-option-group select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  color: #374151;
+}
+
+.reactai-spin-option-group select:focus {
+  outline: none;
+  border-color: #8B5CF6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.reactai-spin-actions {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  background: white;
+}
+
+.reactai-spin-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reactai-spin-frame-count {
+  font-size: 12px;
+  color: #6B7280;
+  background: #F3F4F6;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.reactai-spin-download-section {
+  text-align: center;
+  padding: 12px;
+  color: #6B7280;
+  font-size: 13px;
+  background: #F9FAFB;
+  border-radius: 0 0 12px 12px;
+}
+
+.reactai-spin-btn-primary,
+.reactai-spin-btn-secondary {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.reactai-spin-btn-primary {
+  background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+  color: white;
+}
+
+.reactai-spin-btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+}
+
+.reactai-spin-btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.reactai-spin-btn-secondary {
+  background: #F3F4F6;
+  color: #6B7280;
+}
+
+.reactai-spin-btn-secondary:hover:not(:disabled) {
+  background: #E5E7EB;
+}
+
+.reactai-spin-btn-secondary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Dark mode for generator */
+.reactai-spin-generator.dark .reactai-spin-upload-zone {
+  background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+  border-color: #6D28D9;
+}
+
+.reactai-spin-generator.dark .reactai-spin-upload-zone:hover {
+  border-color: #8B5CF6;
+  background: linear-gradient(135deg, #2D3748 0%, #1F2937 100%);
+}
+
+.reactai-spin-generator.dark .reactai-spin-upload-content h3,
+.reactai-spin-generator.dark .reactai-spin-upload-content p {
+  color: #C4B5FD;
+}
+
+.reactai-spin-generator.dark .reactai-spin-preview {
+  background: #1F2937;
+}
+
+.reactai-spin-generator.dark .reactai-spin-actions {
+  background: #111827;
+}
+
+.reactai-spin-generator.dark .reactai-spin-btn-secondary {
+  background: #374151;
+  color: #D1D5DB;
+}
+
+.reactai-spin-generator.dark .reactai-spin-generator-header h3 {
+  color: #C4B5FD;
+}
+
+.reactai-spin-generator.dark .reactai-spin-options {
+  background: #1F2937;
+  border-color: #374151;
+}
+
+.reactai-spin-generator.dark .reactai-spin-option-group label {
+  color: #9CA3AF;
+}
+
+.reactai-spin-generator.dark .reactai-spin-option-group select {
+  background: #374151;
+  border-color: #4B5563;
+  color: #E5E7EB;
+}
+
+.reactai-spin-generator.dark .reactai-spin-option-group select:focus {
+  border-color: #8B5CF6;
+}
+
+.reactai-spin-generator.dark .reactai-spin-download-section {
+  background: #1F2937;
+  color: #9CA3AF;
+}
+
+.reactai-spin-generator.dark .reactai-spin-frame-count {
+  background: #374151;
+  color: #D1D5DB;
+}
+

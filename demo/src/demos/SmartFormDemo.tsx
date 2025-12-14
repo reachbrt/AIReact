@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SmartForm, FormSchema } from '@reactai/smartform';
+import { SmartForm, FormSchema } from '@aireact/smartform';
 
 interface SmartFormDemoProps {
   apiKey: string;

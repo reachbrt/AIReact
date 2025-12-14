@@ -1,5 +1,5 @@
 {
-  "name": "@reactai/smartform",
+  "name": "@aireact/smartform",
   "version": "1.0.0",
   "description": "AI form validation & auto-correction for React",
   "type": "module",
@@ -25,7 +25,7 @@
     "react-dom": "^18.0.0"
   },
   "dependencies": {
-    "@reactai/core": "*"
+    "@aireact/core": "*"
   },
   "devDependencies": {
     "@types/react": "^18.2.45",

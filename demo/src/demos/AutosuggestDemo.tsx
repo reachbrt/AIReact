@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Autosuggest } from '@reactai/autosuggest';
+import { Autosuggest } from '@aireact/autosuggest';
 
 interface AutosuggestDemoProps {
   apiKey: string;

@@ -10,15 +10,15 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@reactai/core': path.resolve(__dirname, '../packages/core/dist/index.js'),
-      '@reactai/chatbot': path.resolve(__dirname, '../packages/chatbot/dist/index.js'),
-      '@reactai/autosuggest': path.resolve(__dirname, '../packages/autosuggest/dist/index.js'),
-      '@reactai/smartform': path.resolve(__dirname, '../packages/smartform/dist/index.js'),
-      '@reactai/analytics': path.resolve(__dirname, '../packages/analytics/dist/index.js'),
+      '@aireact/core': path.resolve(__dirname, '../packages/core/dist/index.js'),
+      '@aireact/chatbot': path.resolve(__dirname, '../packages/chatbot/dist/index.js'),
+      '@aireact/autosuggest': path.resolve(__dirname, '../packages/autosuggest/dist/index.js'),
+      '@aireact/smartform': path.resolve(__dirname, '../packages/smartform/dist/index.js'),
+      '@aireact/analytics': path.resolve(__dirname, '../packages/analytics/dist/index.js'),
     },
   },
   optimizeDeps: {
-    include: ['@reactai/core', '@reactai/chatbot', '@reactai/autosuggest', '@reactai/smartform', '@reactai/analytics'],
+    include: ['@aireact/core', '@aireact/chatbot', '@aireact/autosuggest', '@aireact/smartform', '@aireact/analytics'],
   },
 });
 

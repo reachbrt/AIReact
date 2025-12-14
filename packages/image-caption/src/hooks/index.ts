@@ -1,0 +1,2 @@
+export { useImageCaption } from './useImageCaption';
+

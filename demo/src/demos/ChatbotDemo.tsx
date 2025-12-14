@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChatWindow } from '@reactai/chatbot';
+import { ChatWindow } from '@aireact/chatbot';
 
 interface ChatbotDemoProps {
   apiKey: string;

@@ -1,0 +1,103 @@
+/**
+ * Predictive Input Styles
+ */
+
+.reactai-predictive-wrapper {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  position: relative;
+  width: 100%;
+}
+
+.reactai-predictive-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.reactai-predictive-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #E5E7EB;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.reactai-predictive-input:focus {
+  outline: none;
+  border-color: #8B5CF6;
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
+}
+
+.reactai-inline-prediction {
+  position: absolute;
+  left: 16px;
+  color: #9CA3AF;
+  pointer-events: none;
+  font-size: 15px;
+}
+
+.reactai-predictive-loader {
+  position: absolute;
+  right: 12px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #E9D5FF;
+  border-top-color: #8B5CF6;
+  border-radius: 50%;
+  animation: predSpin 0.8s linear infinite;
+}
+
+@keyframes predSpin { to { transform: rotate(360deg); } }
+
+.reactai-predictions-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  overflow: hidden;
+}
+
+.reactai-prediction-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.reactai-prediction-item:hover, .reactai-prediction-item.selected {
+  background: #F5F3FF;
+}
+
+.prediction-text { color: #374151; }
+.prediction-confidence { color: #8B5CF6; font-size: 12px; }
+
+/* Dark mode */
+.reactai-predictive-wrapper.dark .reactai-predictive-input {
+  background: #1F2937;
+  border-color: #374151;
+  color: #F9FAFB;
+}
+
+.reactai-predictive-wrapper.dark .reactai-predictions-dropdown {
+  background: #1F2937;
+  border-color: #374151;
+}
+
+.reactai-predictive-wrapper.dark .reactai-prediction-item:hover,
+.reactai-predictive-wrapper.dark .reactai-prediction-item.selected {
+  background: #374151;
+}
+
+.reactai-predictive-wrapper.dark .prediction-text { color: #D1D5DB; }
+

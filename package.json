@@ -1,8 +1,8 @@
 {
-  "name": "reactai",
+  "name": "aireact",
   "version": "1.0.0",
   "private": true,
-  "description": "ReactAI - AI-powered React components for building intelligent applications",
+  "description": "AIReact - AI-powered React components for building intelligent applications",
   "author": "reachbrt",
   "license": "MIT",
   "repository": {
@@ -16,13 +16,13 @@
   "scripts": {
     "dev": "npm run dev --workspace demo",
     "build": "npm run build:packages && npm run build:demo",
-    "build:packages": "npm run build --workspace @reactai/core && npm run build --workspace @reactai/chatbot && npm run build --workspace @reactai/autosuggest && npm run build --workspace @reactai/smartform && npm run build --workspace @reactai/analytics",
+    "build:packages": "npm run build --workspace @aireact/core && npm run build --workspace @aireact/chatbot && npm run build --workspace @aireact/autosuggest && npm run build --workspace @aireact/smartform && npm run build --workspace @aireact/analytics && npm run build --workspace @aireact/image-caption && npm run build --workspace @aireact/emotion-ui && npm run build --workspace @aireact/doc-intelligence && npm run build --workspace @aireact/predictive-input && npm run build --workspace @aireact/smart-notify && npm run build --workspace @aireact/voice-actions && npm run build --workspace @aireact/smart-datatable && npm run build --workspace @aireact/360-spin",
     "build:demo": "npm run build --workspace demo",
-    "build:core": "npm run build --workspace @reactai/core",
-    "build:chatbot": "npm run build --workspace @reactai/chatbot",
-    "build:autosuggest": "npm run build --workspace @reactai/autosuggest",
-    "build:smartform": "npm run build --workspace @reactai/smartform",
-    "build:analytics": "npm run build --workspace @reactai/analytics",
+    "build:core": "npm run build --workspace @aireact/core",
+    "build:chatbot": "npm run build --workspace @aireact/chatbot",
+    "build:autosuggest": "npm run build --workspace @aireact/autosuggest",
+    "build:smartform": "npm run build --workspace @aireact/smartform",
+    "build:analytics": "npm run build --workspace @aireact/analytics",
     "publish:packages": "npm run build:packages && npm publish --access public --workspaces --workspace packages",
     "clean": "rm -rf packages/*/dist demo/dist node_modules/.cache"
   },

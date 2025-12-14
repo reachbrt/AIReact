@@ -1,8 +1,8 @@
 /**
- * @reactai/chatbot - Type definitions
+ * @aireact/chatbot - Type definitions
  */
 
-import { AIProvider } from '@reactai/core';
+import { AIProvider } from '@aireact/core';
 
 export interface ChatMessage {
   id: string;

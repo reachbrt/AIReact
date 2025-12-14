@@ -3,7 +3,7 @@
  */
 
 import { useState, useCallback, useRef } from 'react';
-import { useAIClient } from '@reactai/core';
+import { useAIClient } from '@aireact/core';
 import { Suggestion, UseAutosuggestOptions, UseAutosuggestReturn } from '../types';
 
 function generateId(): string {

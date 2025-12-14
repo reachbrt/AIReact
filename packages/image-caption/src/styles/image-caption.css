@@ -1,0 +1,172 @@
+/**
+ * Image Caption Styles
+ */
+
+.reactai-image-caption {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  max-width: 500px;
+}
+
+.reactai-image-dropzone {
+  border: 2px dashed #8B5CF6;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.reactai-image-dropzone:hover {
+  border-color: #7C3AED;
+  background: linear-gradient(135deg, #EDE9FE 0%, #DDD6FE 100%);
+}
+
+.reactai-image-dropzone.dragging {
+  border-color: #7C3AED;
+  background: linear-gradient(135deg, #DDD6FE 0%, #C4B5FD 100%);
+  transform: scale(1.02);
+}
+
+.reactai-image-dropzone.has-preview {
+  padding: 10px;
+}
+
+.reactai-dropzone-content {
+  color: #6B7280;
+}
+
+.reactai-upload-icon {
+  width: 48px;
+  height: 48px;
+  color: #8B5CF6;
+  margin-bottom: 12px;
+}
+
+.reactai-image-preview {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.reactai-loading-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.reactai-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #E9D5FF;
+  border-top-color: #8B5CF6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.reactai-caption-result {
+  margin-top: 16px;
+  padding: 16px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #E9D5FF;
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.1);
+}
+
+.reactai-caption-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #4C1D95;
+}
+
+.reactai-copy-btn {
+  padding: 4px 12px;
+  background: #8B5CF6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.2s;
+}
+
+.reactai-copy-btn:hover {
+  background: #7C3AED;
+}
+
+.reactai-caption-text {
+  color: #374151;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.reactai-caption-error {
+  margin-top: 12px;
+  padding: 12px;
+  background: #FEE2E2;
+  color: #DC2626;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.reactai-caption-history {
+  margin-top: 16px;
+  padding: 12px;
+  background: #F9FAFB;
+  border-radius: 8px;
+}
+
+.reactai-caption-history h4 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: #6B7280;
+  text-transform: uppercase;
+}
+
+.reactai-history-item {
+  padding: 8px;
+  background: white;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  font-size: 13px;
+  color: #4B5563;
+}
+
+/* Dark mode */
+.reactai-image-caption.dark .reactai-image-dropzone {
+  background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+  border-color: #6366F1;
+}
+
+.reactai-image-caption.dark .reactai-dropzone-content {
+  color: #9CA3AF;
+}
+
+.reactai-image-caption.dark .reactai-caption-result {
+  background: #1F2937;
+  border-color: #374151;
+}
+
+.reactai-image-caption.dark .reactai-caption-header {
+  color: #E9D5FF;
+}
+
+.reactai-image-caption.dark .reactai-caption-text {
+  color: #D1D5DB;
+}
+
