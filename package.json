@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/reachbrt/reactai"
+    "url": "https://github.com/reachbrt/AIReact"
   },
   "workspaces": [
     "packages/*",

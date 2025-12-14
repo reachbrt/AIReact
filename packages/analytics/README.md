@@ -5,7 +5,7 @@
 Intelligent analytics components with AI-driven insights and natural language queries.
 
 [![npm version](https://img.shields.io/npm/v/@aireact/analytics.svg?style=flat-square)](https://www.npmjs.com/package/@aireact/analytics)
-[![MIT License](https://img.shields.io/npm/l/@aireact/analytics.svg?style=flat-square)](https://github.com/reachbrt/reactai/blob/main/LICENSE)
+[![MIT License](https://img.shields.io/npm/l/@aireact/analytics.svg?style=flat-square)](https://github.com/reachbrt/AIReact/blob/main/LICENSE)
 
 ## ✨ Features
 

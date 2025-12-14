@@ -8,9 +8,9 @@
   <!-- Primary Badges -->
   <p>
     <a href="https://www.npmjs.com/package/@aireact/core"><img src="https://img.shields.io/npm/v/@aireact/core.svg?style=for-the-badge&logo=npm&logoColor=white&color=CB3837" alt="npm version"></a>
-    <a href="https://github.com/reachbrt/reactai/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@aireact/core.svg?style=for-the-badge&color=green" alt="MIT License"></a>
-    <a href="https://github.com/reachbrt/reactai/stargazers"><img src="https://img.shields.io/github/stars/reachbrt/reactai?style=for-the-badge&logo=github&color=yellow" alt="GitHub Stars"></a>
-    <a href="https://github.com/reachbrt/reactai/network/members"><img src="https://img.shields.io/github/forks/reachbrt/reactai?style=for-the-badge&logo=github&color=blue" alt="GitHub Forks"></a>
+    <a href="https://github.com/reachbrt/AIReact/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@aireact/core.svg?style=for-the-badge&color=green" alt="MIT License"></a>
+    <a href="https://github.com/reachbrt/AIReact/stargazers"><img src="https://img.shields.io/github/stars/reachbrt/reactai?style=for-the-badge&logo=github&color=yellow" alt="GitHub Stars"></a>
+    <a href="https://github.com/reachbrt/AIReact/network/members"><img src="https://img.shields.io/github/forks/reachbrt/reactai?style=for-the-badge&logo=github&color=blue" alt="GitHub Forks"></a>
   </p>
 
   <!-- Technology Badges -->
@@ -27,7 +27,7 @@
   <p>
     <a href="#-quick-start"><img src="https://img.shields.io/badge/⚡_Quick_Start-Begin-95E1D3?style=for-the-badge" alt="Quick Start"></a>
     <a href="#-component-packages"><img src="https://img.shields.io/badge/📦_Packages-View-4ECDC4?style=for-the-badge" alt="Packages"></a>
-    <a href="https://github.com/reachbrt/reactai/issues/new"><img src="https://img.shields.io/badge/🐛_Report_Bug-Submit-F7B731?style=for-the-badge" alt="Report Bug"></a>
+    <a href="https://github.com/reachbrt/AIReact/issues/new"><img src="https://img.shields.io/badge/🐛_Report_Bug-Submit-F7B731?style=for-the-badge" alt="Report Bug"></a>
   </p>
 
   ---
@@ -471,7 +471,7 @@ function App() {
 
 ```bash
 # Clone the repository
-git clone https://github.com/reachbrt/reactai.git
+git clone https://github.com/reachbrt/AIReact.git
 cd reactai
 
 # Install dependencies

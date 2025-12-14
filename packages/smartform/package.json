@@ -1,6 +1,6 @@
 {
   "name": "@aireact/smartform",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "AI form validation & auto-correction for React",
   "type": "module",
   "main": "./dist/index.js",
@@ -49,4 +49,3 @@
     "*.css"
   ]
 }
-

@@ -5,7 +5,7 @@
 Intelligent data tables with natural language querying and AI-powered insights.
 
 [![npm version](https://img.shields.io/npm/v/@aireact/smart-datatable.svg?style=flat-square)](https://www.npmjs.com/package/@aireact/smart-datatable)
-[![MIT License](https://img.shields.io/npm/l/@aireact/smart-datatable.svg?style=flat-square)](https://github.com/reachbrt/reactai/blob/main/LICENSE)
+[![MIT License](https://img.shields.io/npm/l/@aireact/smart-datatable.svg?style=flat-square)](https://github.com/reachbrt/AIReact/blob/main/LICENSE)
 
 ## ✨ Features
 

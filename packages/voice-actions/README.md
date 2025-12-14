@@ -5,7 +5,7 @@
 Voice recognition and command processing with AI for hands-free application control.
 
 [![npm version](https://img.shields.io/npm/v/@aireact/voice-actions.svg?style=flat-square)](https://www.npmjs.com/package/@aireact/voice-actions)
-[![MIT License](https://img.shields.io/npm/l/@aireact/voice-actions.svg?style=flat-square)](https://github.com/reachbrt/reactai/blob/main/LICENSE)
+[![MIT License](https://img.shields.io/npm/l/@aireact/voice-actions.svg?style=flat-square)](https://github.com/reachbrt/AIReact/blob/main/LICENSE)
 
 ## ✨ Features
 

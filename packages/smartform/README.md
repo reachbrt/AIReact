@@ -5,7 +5,7 @@
 Intelligent form validation and auto-completion powered by AI for smarter user experiences.
 
 [![npm version](https://img.shields.io/npm/v/@aireact/smartform.svg?style=flat-square)](https://www.npmjs.com/package/@aireact/smartform)
-[![MIT License](https://img.shields.io/npm/l/@aireact/smartform.svg?style=flat-square)](https://github.com/reachbrt/reactai/blob/main/LICENSE)
+[![MIT License](https://img.shields.io/npm/l/@aireact/smartform.svg?style=flat-square)](https://github.com/reachbrt/AIReact/blob/main/LICENSE)
 
 ## ✨ Features
 

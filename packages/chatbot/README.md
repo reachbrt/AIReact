@@ -5,7 +5,7 @@
 Enterprise-grade conversational AI with streaming responses, multi-provider support, and beautiful UI.
 
 [![npm version](https://img.shields.io/npm/v/@aireact/chatbot.svg?style=flat-square)](https://www.npmjs.com/package/@aireact/chatbot)
-[![MIT License](https://img.shields.io/npm/l/@aireact/chatbot.svg?style=flat-square)](https://github.com/reachbrt/reactai/blob/main/LICENSE)
+[![MIT License](https://img.shields.io/npm/l/@aireact/chatbot.svg?style=flat-square)](https://github.com/reachbrt/AIReact/blob/main/LICENSE)
 
 ## ✨ Features
 

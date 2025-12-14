@@ -5,7 +5,7 @@
 Generate and display 360° product views with AI image generation for e-commerce.
 
 [![npm version](https://img.shields.io/npm/v/@aireact/360-spin.svg?style=flat-square)](https://www.npmjs.com/package/@aireact/360-spin)
-[![MIT License](https://img.shields.io/npm/l/@aireact/360-spin.svg?style=flat-square)](https://github.com/reachbrt/reactai/blob/main/LICENSE)
+[![MIT License](https://img.shields.io/npm/l/@aireact/360-spin.svg?style=flat-square)](https://github.com/reachbrt/AIReact/blob/main/LICENSE)
 
 ## ✨ Features
 

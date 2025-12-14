@@ -1,6 +1,6 @@
 {
   "name": "@aireact/emotion-ui",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Emotion-aware adaptive UI components for React",
   "type": "module",
   "main": "./dist/index.js",
@@ -13,7 +13,9 @@
     },
     "./dist/emotion-ui.css": "./dist/emotion-ui.css"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc && vite build",
     "dev": "vite build --watch"
@@ -33,9 +35,17 @@
     "vite": "^5.0.10",
     "vite-plugin-dts": "^3.7.0"
   },
-  "keywords": ["react", "emotion", "ui", "adaptive", "sentiment", "ai"],
+  "keywords": [
+    "react",
+    "emotion",
+    "ui",
+    "adaptive",
+    "sentiment",
+    "ai"
+  ],
   "author": "reachbrt",
   "license": "MIT",
-  "sideEffects": ["*.css"]
+  "sideEffects": [
+    "*.css"
+  ]
 }
-

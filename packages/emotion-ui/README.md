@@ -5,7 +5,7 @@
 AI-powered components that adapt based on user sentiment and emotional context.
 
 [![npm version](https://img.shields.io/npm/v/@aireact/emotion-ui.svg?style=flat-square)](https://www.npmjs.com/package/@aireact/emotion-ui)
-[![MIT License](https://img.shields.io/npm/l/@aireact/emotion-ui.svg?style=flat-square)](https://github.com/reachbrt/reactai/blob/main/LICENSE)
+[![MIT License](https://img.shields.io/npm/l/@aireact/emotion-ui.svg?style=flat-square)](https://github.com/reachbrt/AIReact/blob/main/LICENSE)
 
 ## ✨ Features
 

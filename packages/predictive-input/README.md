@@ -5,7 +5,7 @@
 Intelligent text prediction and completion powered by AI for enhanced typing experiences.
 
 [![npm version](https://img.shields.io/npm/v/@aireact/predictive-input.svg?style=flat-square)](https://www.npmjs.com/package/@aireact/predictive-input)
-[![MIT License](https://img.shields.io/npm/l/@aireact/predictive-input.svg?style=flat-square)](https://github.com/reachbrt/reactai/blob/main/LICENSE)
+[![MIT License](https://img.shields.io/npm/l/@aireact/predictive-input.svg?style=flat-square)](https://github.com/reachbrt/AIReact/blob/main/LICENSE)
 
 ## ✨ Features
 

@@ -5,7 +5,7 @@
 Extract, analyze, and understand documents using AI with OCR and document processing.
 
 [![npm version](https://img.shields.io/npm/v/@aireact/doc-intelligence.svg?style=flat-square)](https://www.npmjs.com/package/@aireact/doc-intelligence)
-[![MIT License](https://img.shields.io/npm/l/@aireact/doc-intelligence.svg?style=flat-square)](https://github.com/reachbrt/reactai/blob/main/LICENSE)
+[![MIT License](https://img.shields.io/npm/l/@aireact/doc-intelligence.svg?style=flat-square)](https://github.com/reachbrt/AIReact/blob/main/LICENSE)
 
 ## ✨ Features
 
