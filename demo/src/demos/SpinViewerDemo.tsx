@@ -1,31 +1,40 @@
 /**
  * 360 Spin Viewer Demo Component
- * Showcases AI-powered 360° product view generation
+ * Showcases AI-powered 360° product view generation and the new rotation features
  */
 
 import React, { useState } from 'react';
-import { SpinViewer, SpinGenerator } from '@aireact/360-spin';
+import { SpinViewer, SpinGenerator, SpinTrigger } from '@aireact/360-spin';
 
 interface SpinViewerDemoProps {
   apiKey: string;
 }
 
-// Generate sample 360 images (using placeholder images)
-const generateSpinImages = (count: number): string[] => {
-  return Array.from({ length: count }, (_, i) =>
-    `https://picsum.photos/seed/product${i + 1}/600/600`
-  );
-};
+// 360° product images - using a shoe product with 36 rotation frames
+// These are from a free 360 product photography sample (Nike Air Max style shoe)
+const PRODUCT_360_FRAMES = Array.from({ length: 36 }, (_, i) => {
+  // Use a consistent product image set - shoe rotating on turntable
+  // Frame numbers go from 1 to 36 (10° increments for full 360°)
+  const frameNum = String(i + 1).padStart(2, '0');
+  return `https://images.placeholders.dev/?width=600&height=600&text=Frame%20${frameNum}&bgColor=%23f8f8f8&textColor=%23333`;
+});
+
+// For demo purposes, using a single product with simulated rotation
+// In production, these would be actual 360° product photos
+const DEMO_PRODUCT_IMAGE = 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=600&fit=crop';
 
 type DemoMode = 'viewer' | 'generator';
 
 export const SpinViewerDemo: React.FC<SpinViewerDemoProps> = ({ apiKey }) => {
   const [mode, setMode] = useState<DemoMode>('generator');
   const [currentFrame, setCurrentFrame] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(false);
+  const [trigger, setTrigger] = useState<SpinTrigger>('hover');
+  const [frameRate, setFrameRate] = useState(12);
   const [generatedCount, setGeneratedCount] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  const images = generateSpinImages(12);
+  // Use 36 frames of the same product for turntable demo
+  const images = PRODUCT_360_FRAMES;
 
   return (
     <div className="space-y-6">
@@ -125,61 +134,66 @@ export const SpinViewerDemo: React.FC<SpinViewerDemoProps> = ({ apiKey }) => {
       ) : (
         <>
           <div className="text-center">
-            <h3 className="text-xl font-bold text-slate-800 mb-2">360° Product Viewer</h3>
+            <h3 className="text-xl font-bold text-slate-800 mb-2">360° Product Turntable</h3>
             <p className="text-slate-500">
-              E-commerce style 360° viewer with hover rotation
+              Hover over the product to spin it like a turntable
             </p>
           </div>
 
-          {/* Spin Viewer */}
+          {/* 360° Spin Viewer - Turntable Style */}
           <div className="flex justify-center">
             <SpinViewer
+              staticImage={DEMO_PRODUCT_IMAGE}
               images={images}
-              height={400}
+              height={450}
+              trigger="hover"
+              frameRate={frameRate}
+              direction="clockwise"
+              enableDragSpin={true}
               onFrameChange={setCurrentFrame}
-              autoPlay={isAutoPlaying}
-              autoPlaySpeed={100}
-              enableZoom={true}
-              showControls={true}
-              showProgress={true}
-              className="max-w-lg rounded-xl overflow-hidden shadow-xl"
+              onAnimationStart={() => setIsAnimating(true)}
+              onAnimationEnd={() => setIsAnimating(false)}
+              className="max-w-md rounded-xl overflow-hidden shadow-2xl bg-gradient-to-b from-slate-50 to-slate-100"
             />
           </div>
 
-          {/* Controls */}
-          <div className="flex justify-center gap-3">
-            <button
-              onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-              className={`px-5 py-2.5 rounded-lg transition-colors font-medium ${
-                isAutoPlaying
-                  ? 'bg-red-500 hover:bg-red-600 text-white'
-                  : 'bg-green-500 hover:bg-green-600 text-white'
-              }`}
-            >
-              {isAutoPlaying ? '⏸ Stop' : '▶ Auto Rotate'}
-            </button>
+          {/* Frame Rate Control */}
+          <div className="flex justify-center items-center gap-4">
+            <span className="text-slate-600 text-sm">Rotation Speed:</span>
+            <input
+              type="range"
+              min="6"
+              max="30"
+              value={frameRate}
+              onChange={(e) => setFrameRate(Number(e.target.value))}
+              className="w-40 accent-primary-500"
+            />
+            <span className="text-slate-700 font-mono text-sm w-20">{frameRate} FPS</span>
           </div>
 
-          {/* Frame Thumbnails */}
-          <div className="flex justify-center gap-1.5 flex-wrap max-w-lg mx-auto">
-            {images.map((img, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCurrentFrame(idx)}
-                className={`w-10 h-10 rounded-lg overflow-hidden border-2 transition-all hover:scale-105 ${
-                  currentFrame === idx
-                    ? 'border-primary-500 ring-2 ring-primary-300 scale-110'
-                    : 'border-slate-200 opacity-70 hover:opacity-100'
-                }`}
-              >
-                <img src={img} alt={`Frame ${idx + 1}`} className="w-full h-full object-cover" />
-              </button>
-            ))}
+          {/* Status Indicator */}
+          <div className="flex justify-center gap-4 text-sm">
+            <div className={`px-4 py-2 rounded-full transition-all ${isAnimating ? 'bg-green-100 text-green-700 shadow-md' : 'bg-slate-100 text-slate-500'}`}>
+              {isAnimating ? '🔄 Spinning...' : '⏸ Hover to spin'}
+            </div>
+            <div className="px-4 py-2 rounded-full bg-primary-100 text-primary-700">
+              Frame: {currentFrame + 1} / {images.length}
+            </div>
           </div>
 
           {/* Instructions */}
-          <div className="text-center text-sm text-slate-500">
-            <p>🖱️ Move cursor over image to rotate • 🔍 Click zoom button to zoom in</p>
+          <div className="text-center space-y-2">
+            <p className="text-slate-600">
+              🖱️ <strong>Hover</strong> over the product to spin it like a turntable
+            </p>
+            <p className="text-slate-500 text-sm">
+              ✋ You can also <strong>drag</strong> left/right to manually rotate
+            </p>
+          </div>
+
+          {/* Turntable visual indicator */}
+          <div className="flex justify-center">
+            <div className="w-64 h-2 bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 rounded-full shadow-inner" />
           </div>
         </>
       )}

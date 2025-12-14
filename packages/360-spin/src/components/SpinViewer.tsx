@@ -1,44 +1,69 @@
 /**
- * SpinViewer Component - 360° product viewer like Ortery
- * Drag to rotate with smooth turntable-style interaction
+ * SpinViewer Component - 360° product viewer with auto-rotation and drag-to-spin
+ * Implements the product rotation logic from IMPLEMENTATION_GUIDE.md:
+ * - Static image shown when not animating
+ * - Frame sequence animation on hover/click/auto trigger
+ * - Drag-to-spin interaction
+ * - requestAnimationFrame-based smooth rotation
  */
 
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useEffect, useRef, useCallback } from 'react';
 import { SpinViewerProps } from '../types';
+import { use360Spin } from '../hooks/use360Spin';
 import '../styles/360-spin.css';
 
 export const SpinViewer: React.FC<SpinViewerProps> = ({
+  staticImage,
   images,
   width = '100%',
   height = 400,
+  trigger = 'manual',
+  frameRate = 30,
+  direction = 'clockwise',
   sensitivity = 8,
   reverse = false,
+  enableDragSpin = true,
   onFrameChange,
+  onAnimationStart,
+  onAnimationEnd,
   theme = 'light',
   className = ''
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [currentFrame, setCurrentFrame] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const [imagesLoaded, setImagesLoaded] = useState(false);
-  const [loadProgress, setLoadProgress] = useState(0);
-  const lastXRef = useRef(0);
-  const accumulatedDeltaRef = useRef(0);
-
   const totalFrames = images.length;
+
+  // Use the 360 spin hook for state and animation control
+  const {
+    currentFrame,
+    isDragging,
+    isAnimating,
+    isLoading,
+    loadProgress,
+    startAnimation,
+    stopAnimation,
+    startDrag,
+    moveDrag,
+    endDrag,
+    setLoading
+  } = use360Spin(totalFrames, {
+    sensitivity,
+    frameRate,
+    direction: reverse ? (direction === 'clockwise' ? 'counterclockwise' : 'clockwise') : direction,
+    onFrameChange,
+    onAnimationStart,
+    onAnimationEnd
+  });
 
   // Preload all images for smooth rotation
   useEffect(() => {
     if (images.length === 0) return;
 
-    setImagesLoaded(false);
-    setLoadProgress(0);
+    setLoading(true, 0);
 
     // Check if images are base64 data URLs (already loaded)
     const areBase64Images = images.every(src => src.startsWith('data:'));
     if (areBase64Images) {
-      setImagesLoaded(true);
-      setLoadProgress(100);
+      setLoading(false, 100);
       return;
     }
 
@@ -49,16 +74,20 @@ export const SpinViewer: React.FC<SpinViewerProps> = ({
       const img = new Image();
       img.onload = () => {
         loadedCount++;
-        setLoadProgress(Math.round((loadedCount / images.length) * 100));
+        const progress = Math.round((loadedCount / images.length) * 100);
         if (loadedCount === images.length) {
-          setImagesLoaded(true);
+          setLoading(false, 100);
+        } else {
+          setLoading(true, progress);
         }
       };
       img.onerror = () => {
         loadedCount++;
-        setLoadProgress(Math.round((loadedCount / images.length) * 100));
+        const progress = Math.round((loadedCount / images.length) * 100);
         if (loadedCount === images.length) {
-          setImagesLoaded(true);
+          setLoading(false, 100);
+        } else {
+          setLoading(true, progress);
         }
       };
       img.src = src;
@@ -71,90 +100,90 @@ export const SpinViewer: React.FC<SpinViewerProps> = ({
         img.onerror = null;
       });
     };
-  }, [images]);
+  }, [images, setLoading]);
 
-  // Notify parent of frame changes
+  // Auto-start animation if trigger is 'auto'
   useEffect(() => {
-    onFrameChange?.(currentFrame);
-  }, [currentFrame, onFrameChange]);
+    if (trigger === 'auto' && !isLoading && totalFrames > 0) {
+      startAnimation();
+    }
+  }, [trigger, isLoading, totalFrames, startAnimation]);
+
+  // Handle mouse enter - start animation on hover
+  const handleMouseEnter = useCallback(() => {
+    if (trigger === 'hover' && !isLoading) {
+      startAnimation();
+    }
+  }, [trigger, isLoading, startAnimation]);
+
+  // Handle mouse leave - stop animation on hover end
+  const handleMouseLeave = useCallback(() => {
+    if (trigger === 'hover') {
+      stopAnimation();
+    }
+    if (isDragging) {
+      endDrag();
+    }
+  }, [trigger, isDragging, stopAnimation, endDrag]);
+
+  // Handle click - toggle animation on click
+  const handleClick = useCallback(() => {
+    if (trigger === 'click' && !isDragging) {
+      if (isAnimating) {
+        stopAnimation();
+      } else {
+        startAnimation();
+      }
+    }
+  }, [trigger, isDragging, isAnimating, startAnimation, stopAnimation]);
 
   // Handle drag start
   const handleMouseDown = useCallback((e: React.MouseEvent) => {
+    if (!enableDragSpin) return;
     e.preventDefault();
-    setIsDragging(true);
-    lastXRef.current = e.clientX;
-    accumulatedDeltaRef.current = 0;
-  }, []);
+    startDrag(e.clientX);
+  }, [enableDragSpin, startDrag]);
 
-  // Handle drag move - rotate product based on mouse movement
+  // Handle drag move
   const handleMouseMove = useCallback((e: React.MouseEvent) => {
-    if (!isDragging || !imagesLoaded || totalFrames === 0) return;
-
-    const deltaX = e.clientX - lastXRef.current;
-    accumulatedDeltaRef.current += deltaX;
-
-    const direction = reverse ? -1 : 1;
-    const frameDelta = Math.floor(accumulatedDeltaRef.current / sensitivity) * direction;
-
-    if (frameDelta !== 0) {
-      setCurrentFrame(prev => {
-        const newFrame = ((prev + frameDelta) % totalFrames + totalFrames) % totalFrames;
-        return newFrame;
-      });
-      accumulatedDeltaRef.current = accumulatedDeltaRef.current % sensitivity;
-    }
-
-    lastXRef.current = e.clientX;
-  }, [isDragging, imagesLoaded, sensitivity, reverse, totalFrames]);
+    if (!enableDragSpin || isLoading || totalFrames === 0) return;
+    moveDrag(e.clientX);
+  }, [enableDragSpin, isLoading, totalFrames, moveDrag]);
 
   // Handle drag end
   const handleMouseUp = useCallback(() => {
-    setIsDragging(false);
-    accumulatedDeltaRef.current = 0;
-  }, []);
-
-  // Handle mouse leave
-  const handleMouseLeave = useCallback(() => {
-    if (isDragging) {
-      setIsDragging(false);
-      accumulatedDeltaRef.current = 0;
-    }
-  }, [isDragging]);
+    if (!enableDragSpin) return;
+    endDrag();
+  }, [enableDragSpin, endDrag]);
 
   // Handle touch events for mobile
   const handleTouchStart = useCallback((e: React.TouchEvent) => {
-    setIsDragging(true);
-    lastXRef.current = e.touches[0].clientX;
-    accumulatedDeltaRef.current = 0;
-  }, []);
+    if (!enableDragSpin) return;
+    startDrag(e.touches[0].clientX);
+  }, [enableDragSpin, startDrag]);
 
   const handleTouchMove = useCallback((e: React.TouchEvent) => {
-    if (!isDragging || !imagesLoaded || totalFrames === 0) return;
-
-    const deltaX = e.touches[0].clientX - lastXRef.current;
-    accumulatedDeltaRef.current += deltaX;
-
-    const direction = reverse ? -1 : 1;
-    const frameDelta = Math.floor(accumulatedDeltaRef.current / sensitivity) * direction;
-
-    if (frameDelta !== 0) {
-      setCurrentFrame(prev => {
-        const newFrame = ((prev + frameDelta) % totalFrames + totalFrames) % totalFrames;
-        return newFrame;
-      });
-      accumulatedDeltaRef.current = accumulatedDeltaRef.current % sensitivity;
-    }
-
-    lastXRef.current = e.touches[0].clientX;
-  }, [isDragging, imagesLoaded, sensitivity, reverse, totalFrames]);
+    if (!enableDragSpin || isLoading || totalFrames === 0) return;
+    moveDrag(e.touches[0].clientX);
+  }, [enableDragSpin, isLoading, totalFrames, moveDrag]);
 
   const handleTouchEnd = useCallback(() => {
-    setIsDragging(false);
-    accumulatedDeltaRef.current = 0;
-  }, []);
+    if (!enableDragSpin) return;
+    endDrag();
+  }, [enableDragSpin, endDrag]);
+
+  // Determine which image to show
+  const getDisplayImage = (): string => {
+    // If animating or dragging, show current frame
+    if (isAnimating || isDragging) {
+      return images[currentFrame] || staticImage || '';
+    }
+    // Otherwise show static image (or first frame if no static image)
+    return staticImage || images[0] || '';
+  };
 
   // Show loading state while images preload
-  if (!imagesLoaded && images.length > 0) {
+  if (isLoading && images.length > 0) {
     return (
       <div
         className={`reactai-spin-viewer ${theme === 'dark' ? 'dark' : ''} loading ${className}`}
@@ -168,32 +197,63 @@ export const SpinViewer: React.FC<SpinViewerProps> = ({
     );
   }
 
-  // Clean product display - drag left/right to rotate (like Ortery)
+  // Determine cursor based on state and settings
+  const getCursor = (): string => {
+    if (!enableDragSpin) {
+      return trigger === 'click' ? 'pointer' : 'default';
+    }
+    return isDragging ? 'grabbing' : 'grab';
+  };
+
+  // Main viewer with all interaction handlers
   return (
     <div
       ref={containerRef}
-      className={`reactai-spin-viewer ${theme === 'dark' ? 'dark' : ''} ${isDragging ? 'dragging' : ''} ${className}`}
+      className={`reactai-spin-viewer ${theme === 'dark' ? 'dark' : ''} ${isDragging ? 'dragging' : ''} ${isAnimating ? 'animating' : ''} ${className}`}
       style={{
         width,
         height,
-        cursor: isDragging ? 'grabbing' : 'grab',
+        cursor: getCursor(),
         userSelect: 'none'
       }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseLeave}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
       <img
-        src={images[currentFrame]}
+        src={getDisplayImage()}
         alt={`360 view frame ${currentFrame + 1} of ${totalFrames}`}
         className="reactai-spin-image"
         draggable={false}
         style={{ pointerEvents: 'none' }}
       />
+
+      {/* Hint overlay for hover trigger */}
+      {trigger === 'hover' && !isAnimating && !isDragging && (
+        <div className="reactai-spin-hint">
+          Hover to spin
+        </div>
+      )}
+
+      {/* Hint overlay for click trigger */}
+      {trigger === 'click' && !isAnimating && !isDragging && (
+        <div className="reactai-spin-hint">
+          Click to spin
+        </div>
+      )}
+
+      {/* Frame indicator */}
+      {(isAnimating || isDragging) && (
+        <div className="reactai-spin-frame-indicator">
+          {currentFrame + 1} / {totalFrames}
+        </div>
+      )}
     </div>
   );
 };
