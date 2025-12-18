@@ -22,14 +22,24 @@ import './styles/chatbot.css';
 export { ChatWindow, ChatMessage, ChatInput } from './components';
 
 // Hooks
-export { useChatbot } from './hooks';
+export { useChatbot, useRAG, useVoice } from './hooks';
 
 // Types
 export type {
   ChatMessage as ChatMessageType,
+  ChatAttachment,
   ChatWindowProps,
   UseChatbotOptions,
   UseChatbotReturn,
+  // RAG types
+  RAGDocument,
+  RAGChunk,
+  UseRAGOptions,
+  UseRAGReturn,
+  // Voice types
+  UseVoiceOptions,
+  UseVoiceReturn,
+  SpeechOptions,
 } from './types';
 
 // Version export

@@ -102,14 +102,478 @@
 .reactai-datatable-pagination button:disabled { opacity: 0.5; cursor: not-allowed; }
 .reactai-datatable-pagination span { font-size: 13px; color: #6B7280; }
 
+/* Header */
+.reactai-datatable-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.reactai-datatable-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.reactai-datatable-insights-btn {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.reactai-datatable-insights-btn:hover { opacity: 0.9; }
+.reactai-datatable-insights-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Header Actions */
+.reactai-datatable-header-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Export Dropdown */
+.reactai-datatable-export-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.reactai-datatable-export-btn {
+  padding: 8px 16px;
+  background: #10B981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.reactai-datatable-export-btn:hover {
+  background: #059669;
+}
+
+.reactai-datatable-export-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  min-width: 120px;
+  overflow: hidden;
+}
+
+.reactai-datatable-export-dropdown:hover .reactai-datatable-export-menu {
+  display: block;
+}
+
+.reactai-datatable-export-menu button {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+}
+
+.reactai-datatable-export-menu button:hover {
+  background: #F3F4F6;
+}
+
+.reactai-datatable-export-menu button:not(:last-child) {
+  border-bottom: 1px solid #E5E7EB;
+}
+
+/* Loading */
+.reactai-datatable-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background: #FEF3C7;
+  color: #92400E;
+  font-size: 14px;
+}
+
+.reactai-datatable-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #D97706;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Insights Panel */
+.reactai-datatable-insights-panel {
+  margin: 16px;
+  background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
+  border-radius: 12px;
+  border: 1px solid #DDD6FE;
+  overflow: hidden;
+}
+
+.reactai-datatable-insights-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: rgba(139, 92, 246, 0.1);
+  border-bottom: 1px solid #DDD6FE;
+}
+
+.reactai-datatable-insights-header h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #5B21B6;
+}
+
+.reactai-datatable-insights-header button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #7C3AED;
+  cursor: pointer;
+}
+
+.reactai-datatable-insights-list {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.reactai-datatable-insight {
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+  border-left: 4px solid #8B5CF6;
+}
+
+.reactai-datatable-insight-trends { border-left-color: #10B981; }
+.reactai-datatable-insight-outliers { border-left-color: #F59E0B; }
+.reactai-datatable-insight-patterns { border-left-color: #3B82F6; }
+.reactai-datatable-insight-recommendations { border-left-color: #EC4899; }
+.reactai-datatable-insight-summary { border-left-color: #6366F1; }
+
+.reactai-datatable-insight-title {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.reactai-datatable-insight-desc {
+  font-size: 13px;
+  color: #6B7280;
+  margin-bottom: 4px;
+}
+
+.reactai-datatable-insight-confidence {
+  font-size: 11px;
+  color: #9CA3AF;
+}
+
+/* Sortable columns */
+.reactai-datatable-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.reactai-datatable-table th.sortable:hover {
+  background: #F3F4F6;
+}
+
+.sort-indicator {
+  margin-left: 4px;
+  color: #8B5CF6;
+}
+
+/* Empty message */
+.empty-message {
+  text-align: center;
+  padding: 40px 16px !important;
+  color: #9CA3AF;
+  font-style: italic;
+}
+
+/* Actions column */
+.actions-col {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 4px 10px;
+  font-size: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.action-primary { background: #8B5CF6; color: white; }
+.action-secondary { background: #F3F4F6; color: #374151; }
+.action-danger { background: #EF4444; color: white; }
+.action-ai { background: linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%); color: white; }
+
+.action-btn:hover { opacity: 0.85; }
+.action-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Pagination enhanced */
+.reactai-datatable-pagination {
+  justify-content: space-between;
+}
+
+.reactai-datatable-count {
+  font-size: 13px;
+  color: #6B7280;
+}
+
+.reactai-datatable-pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Modal */
+.reactai-datatable-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.reactai-datatable-modal {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.reactai-datatable-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%);
+}
+
+.reactai-datatable-modal-header h4 {
+  margin: 0;
+  color: white;
+  font-size: 16px;
+}
+
+.reactai-datatable-modal-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.reactai-datatable-modal-content {
+  padding: 16px;
+  max-height: 400px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #374151;
+}
+
 /* Dark mode */
 .reactai-datatable.dark {
   background: #1F2937;
   border-color: #374151;
 }
+.reactai-datatable.dark .reactai-datatable-header { border-color: #374151; }
+.reactai-datatable.dark .reactai-datatable-title { color: #F9FAFB; }
 .reactai-datatable.dark .reactai-datatable-search { background: #111827; border-color: #374151; }
 .reactai-datatable.dark .reactai-datatable-input { background: #1F2937; border-color: #374151; color: #F9FAFB; }
 .reactai-datatable.dark .reactai-datatable-table th { background: #111827; color: #D1D5DB; border-color: #374151; }
 .reactai-datatable.dark .reactai-datatable-table td { color: #9CA3AF; border-color: #374151; }
 .reactai-datatable.dark .reactai-datatable-table tr:hover { background: #374151; }
+.reactai-datatable.dark .reactai-datatable-insights-panel { background: #111827; border-color: #374151; }
+.reactai-datatable.dark .reactai-datatable-insight { background: #1F2937; }
+.reactai-datatable.dark .reactai-datatable-modal { background: #1F2937; }
+.reactai-datatable.dark .reactai-datatable-modal-content { color: #D1D5DB; }
+
+/* Clear Button */
+.reactai-datatable-clear-btn {
+  background: #EF4444 !important;
+}
+
+.reactai-datatable-clear-btn:hover {
+  background: #DC2626 !important;
+}
+
+/* Floating Chat FAB Button */
+.reactai-datatable-chat-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  z-index: 1000;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.reactai-datatable-chat-fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.5);
+}
+
+/* Floating Chat Interface */
+.reactai-datatable-chat-floating {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 380px;
+  max-width: calc(100vw - 48px);
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  overflow: hidden;
+}
+
+.reactai-datatable-chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.reactai-datatable-chat-close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reactai-datatable-chat-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.reactai-datatable-chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  background: #F9FAFB;
+  min-height: 200px;
+  max-height: 320px;
+}
+
+.reactai-datatable-chat-empty {
+  color: #6B7280;
+  font-size: 13px;
+  text-align: left;
+  padding: 16px;
+  line-height: 1.8;
+}
+
+.reactai-datatable-chat-message {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  max-width: 90%;
+  line-height: 1.4;
+}
+
+.reactai-datatable-chat-user {
+  background: #3B82F6;
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+
+.reactai-datatable-chat-assistant {
+  background: white;
+  color: #374151;
+  border: 1px solid #E5E7EB;
+  border-bottom-left-radius: 4px;
+}
+
+.reactai-datatable-chat-role {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.reactai-datatable-chat-content {
+  flex: 1;
+}
+
+.reactai-datatable-chat-input {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px;
+  border-top: 1px solid #E5E7EB;
+  background: white;
+}
+
+.reactai-datatable-chat-input .reactai-datatable-input {
+  flex: 1;
+}
+
+/* Dark mode chat */
+.reactai-datatable.dark .reactai-datatable-chat-floating { background: #1F2937; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5); }
+.reactai-datatable.dark .reactai-datatable-chat-messages { background: #111827; }
+.reactai-datatable.dark .reactai-datatable-chat-empty { color: #9CA3AF; }
+.reactai-datatable.dark .reactai-datatable-chat-assistant { background: #374151; color: #D1D5DB; border-color: #4B5563; }
+.reactai-datatable.dark .reactai-datatable-chat-input { background: #1F2937; border-color: #374151; }
 

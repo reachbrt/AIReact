@@ -27,6 +27,7 @@ export { useSmartValidation } from './hooks';
 // Types
 export type {
   FieldType,
+  FieldOption,
   FieldSchema,
   FormSchema,
   FieldError,

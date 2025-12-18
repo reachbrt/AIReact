@@ -16,6 +16,9 @@
   "scripts": {
     "dev": "npm run dev --workspace demo",
     "build": "npm run build:packages && npm run build:demo",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
     "build:packages": "npm run build --workspace @aireact/core && npm run build --workspace @aireact/chatbot && npm run build --workspace @aireact/autosuggest && npm run build --workspace @aireact/smartform && npm run build --workspace @aireact/analytics && npm run build --workspace @aireact/image-caption && npm run build --workspace @aireact/emotion-ui && npm run build --workspace @aireact/doc-intelligence && npm run build --workspace @aireact/predictive-input && npm run build --workspace @aireact/smart-notify && npm run build --workspace @aireact/voice-actions && npm run build --workspace @aireact/smart-datatable && npm run build --workspace @aireact/360-spin",
     "build:demo": "npm run build --workspace demo",
     "build:core": "npm run build --workspace @aireact/core",

@@ -29,6 +29,48 @@ const formSchema: FormSchema = {
     placeholder: '+1 (555) 123-4567',
     aiValidation: true,
   },
+  country: {
+    name: 'country',
+    type: 'select',
+    label: 'Country',
+    required: true,
+    options: [
+      { value: 'us', label: 'United States' },
+      { value: 'uk', label: 'United Kingdom' },
+      { value: 'ca', label: 'Canada' },
+      { value: 'au', label: 'Australia' },
+      { value: 'in', label: 'India' },
+    ],
+  },
+  notifications: {
+    name: 'notifications',
+    type: 'radio',
+    label: 'Email Notifications',
+    inline: true,
+    options: [
+      { value: 'all', label: 'All' },
+      { value: 'important', label: 'Important only' },
+      { value: 'none', label: 'None' },
+    ],
+  },
+  interests: {
+    name: 'interests',
+    type: 'multiselect',
+    label: 'Interests',
+    options: [
+      { value: 'ai', label: 'Artificial Intelligence' },
+      { value: 'web', label: 'Web Development' },
+      { value: 'mobile', label: 'Mobile Apps' },
+      { value: 'cloud', label: 'Cloud Computing' },
+      { value: 'data', label: 'Data Science' },
+    ],
+  },
+  terms: {
+    name: 'terms',
+    type: 'checkbox',
+    label: 'I agree to the Terms and Conditions',
+    required: true,
+  },
   message: {
     name: 'message',
     type: 'textarea',
@@ -39,15 +81,19 @@ const formSchema: FormSchema = {
 };
 
 export const SmartFormDemo: React.FC<SmartFormDemoProps> = ({ apiKey }) => {
-  const [values, setValues] = useState<Record<string, string>>({
+  const [values, setValues] = useState<Record<string, string | string[]>>({
     name: '',
     email: '',
     phone: '',
+    country: '',
+    notifications: '',
+    interests: [],
+    terms: '',
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (formValues: Record<string, string>) => {
+  const handleSubmit = (formValues: Record<string, string | string[]>) => {
     console.log('Form submitted:', formValues);
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 3000);
@@ -92,7 +138,7 @@ export const SmartFormDemo: React.FC<SmartFormDemoProps> = ({ apiKey }) => {
             <span className="text-green-500">✓</span> Smart error messages with suggestions
           </li>
           <li className="flex items-center gap-2">
-            <span className="text-green-500">✓</span> Auto-correction on blur (optional)
+            <span className="text-green-500">✓</span> <strong>NEW:</strong> Select, Radio, Checkbox, MultiSelect fields
           </li>
           <li className="flex items-center gap-2">
             <span className="text-green-500">✓</span> Real-time validation feedback

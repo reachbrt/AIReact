@@ -4,7 +4,7 @@
 
 import { useState, useCallback } from 'react';
 import { useAIClient, Message } from '@aireact/core';
-import { ChatMessage, UseChatbotOptions, UseChatbotReturn } from '../types';
+import { ChatMessage, ChatAttachment, UseChatbotOptions, UseChatbotReturn } from '../types';
 
 function generateId(): string {
   return `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
@@ -21,7 +21,7 @@ export function useChatbot(options: UseChatbotOptions): UseChatbotReturn {
     model: options.model,
   });
 
-  const sendMessage = useCallback(async (content: string) => {
+  const sendMessage = useCallback(async (content: string, attachments?: ChatAttachment[]) => {
     if (!content.trim()) return;
 
     const userMessage: ChatMessage = {
@@ -29,6 +29,7 @@ export function useChatbot(options: UseChatbotOptions): UseChatbotReturn {
       role: 'user',
       content: content.trim(),
       timestamp: new Date(),
+      attachments,
     };
 
     setMessages(prev => [...prev, userMessage]);

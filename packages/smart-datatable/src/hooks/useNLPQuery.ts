@@ -23,9 +23,9 @@ export function useNLPQuery<T extends Record<string, any>>(data: T[], columns: C
     if (lowerQuery.includes('sort by') || lowerQuery.includes('order by')) {
       const sortMatch = lowerQuery.match(/(?:sort|order) by (\w+)/);
       if (sortMatch) {
-        const sortColumn = columns.find(c => 
-          c.key.toLowerCase() === sortMatch[1] || 
-          c.header.toLowerCase() === sortMatch[1]
+        const sortColumn = columns.find(c =>
+          c.key.toLowerCase() === sortMatch[1] ||
+          (c.header && c.header.toLowerCase() === sortMatch[1])
         );
         if (sortColumn) {
           const direction = lowerQuery.includes('desc') ? 'desc' : 'asc';

@@ -4,7 +4,25 @@
 
 import { AIProvider } from '@aireact/core';
 
-export type FieldType = 'text' | 'email' | 'phone' | 'url' | 'number' | 'date' | 'password' | 'textarea';
+export type FieldType =
+  | 'text'
+  | 'email'
+  | 'phone'
+  | 'url'
+  | 'number'
+  | 'date'
+  | 'password'
+  | 'textarea'
+  | 'select'
+  | 'radio'
+  | 'checkbox'
+  | 'multiselect';
+
+export interface FieldOption {
+  value: string;
+  label: string;
+  disabled?: boolean;
+}
 
 export interface FieldSchema {
   name: string;
@@ -18,6 +36,10 @@ export interface FieldSchema {
   maxLength?: number;
   min?: number;
   max?: number;
+  /** Options for select, radio, checkbox, multiselect fields */
+  options?: FieldOption[];
+  /** Allow inline layout for radio/checkbox groups */
+  inline?: boolean;
 }
 
 export interface FormSchema {
