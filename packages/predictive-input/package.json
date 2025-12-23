@@ -1,6 +1,6 @@
 {
   "name": "@aireact/predictive-input",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "AI predictive text completion for React",
   "type": "module",
   "main": "./dist/index.js",

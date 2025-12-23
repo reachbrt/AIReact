@@ -1,6 +1,6 @@
 {
   "name": "@aireact/voice-actions",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Voice commands & speech recognition for React",
   "type": "module",
   "main": "./dist/index.js",

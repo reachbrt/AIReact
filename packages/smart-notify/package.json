@@ -1,6 +1,6 @@
 {
   "name": "@aireact/smart-notify",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "AI-powered smart notifications for React",
   "type": "module",
   "main": "./dist/index.js",

@@ -1,6 +1,6 @@
 {
   "name": "@aireact/autosuggest",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "AI-powered smart suggestions component for React",
   "type": "module",
   "main": "./dist/index.js",

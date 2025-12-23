@@ -1,6 +1,6 @@
 {
   "name": "@aireact/smart-datatable",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "AI-native data tables with NLP queries for React",
   "type": "module",
   "main": "./dist/index.js",

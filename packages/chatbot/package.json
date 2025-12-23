@@ -1,6 +1,6 @@
 {
   "name": "@aireact/chatbot",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Enterprise AI chatbot component for React with multi-provider support",
   "type": "module",
   "main": "./dist/index.js",

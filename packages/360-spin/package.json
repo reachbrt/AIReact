@@ -1,6 +1,6 @@
 {
   "name": "@aireact/360-spin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Interactive 360° product viewer for React",
   "type": "module",
   "main": "./dist/index.js",
