@@ -4,8 +4,12 @@
 
 Intelligent notification system that adapts messages based on context and user behavior.
 
-[![npm version](https://img.shields.io/npm/v/@aireact/smart-notify.svg?style=flat-square)](https://www.npmjs.com/package/@aireact/smart-notify)
-[![MIT License](https://img.shields.io/npm/l/@aireact/smart-notify.svg?style=flat-square)](https://github.com/reachbrt/AIReact/blob/main/LICENSE)
+<p>
+  <a href="https://www.npmjs.com/package/@aireact/smart-notify"><img src="https://img.shields.io/npm/v/@aireact/smart-notify.svg?style=flat-square" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/@aireact/smart-notify"><img src="https://img.shields.io/npm/dm/@aireact/smart-notify" alt="npm downloads"></a>
+  <a href="https://github.com/reachbrt/AIReact/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@aireact/smart-notify.svg?style=flat-square" alt="MIT License"></a>
+  <a href="https://github.com/reachbrt/AIReact"><img src="https://img.shields.io/github/stars/reachbrt/AIReact?style=social" alt="GitHub Stars"></a>
+</p>
 
 ## ✨ Features
 
@@ -123,9 +127,24 @@ function NotificationDemo() {
 
 ## 📦 Related Packages
 
+### React (@aireact)
 - [@aireact/core](https://www.npmjs.com/package/@aireact/core) - Core AI Client
 - [@aireact/emotion-ui](https://www.npmjs.com/package/@aireact/emotion-ui) - Emotion UI
 - [@aireact/chatbot](https://www.npmjs.com/package/@aireact/chatbot) - AI Chat
+- [@aireact/voice-actions](https://www.npmjs.com/package/@aireact/voice-actions) - Voice Actions
+
+### Vue.js (@aivue)
+- [@aivue/smart-notify](https://www.npmjs.com/package/@aivue/smart-notify) - Vue Smart Notify
+- [@aivue/core](https://www.npmjs.com/package/@aivue/core) - Vue Core AI Client
+
+### Angular (@aiangular) - Coming Soon
+- @aiangular/smart-notify - Angular Smart Notify
+
+## 🔗 More Information
+
+- [GitHub Repository](https://github.com/reachbrt/AIReact)
+- [Full Documentation](https://github.com/reachbrt/AIReact/wiki)
+- [Report Issues](https://github.com/reachbrt/AIReact/issues)
 
 ## 📄 License
 

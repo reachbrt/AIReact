@@ -4,8 +4,12 @@
 
 Intelligent data tables with natural language querying and AI-powered insights.
 
-[![npm version](https://img.shields.io/npm/v/@aireact/smart-datatable.svg?style=flat-square)](https://www.npmjs.com/package/@aireact/smart-datatable)
-[![MIT License](https://img.shields.io/npm/l/@aireact/smart-datatable.svg?style=flat-square)](https://github.com/reachbrt/AIReact/blob/main/LICENSE)
+<p>
+  <a href="https://www.npmjs.com/package/@aireact/smart-datatable"><img src="https://img.shields.io/npm/v/@aireact/smart-datatable.svg?style=flat-square" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/@aireact/smart-datatable"><img src="https://img.shields.io/npm/dm/@aireact/smart-datatable" alt="npm downloads"></a>
+  <a href="https://github.com/reachbrt/AIReact/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@aireact/smart-datatable.svg?style=flat-square" alt="MIT License"></a>
+  <a href="https://github.com/reachbrt/AIReact"><img src="https://img.shields.io/github/stars/reachbrt/AIReact?style=social" alt="GitHub Stars"></a>
+</p>
 
 ## ✨ Features
 
@@ -130,9 +134,24 @@ function CustomTable() {
 
 ## 📦 Related Packages
 
+### React (@aireact)
 - [@aireact/core](https://www.npmjs.com/package/@aireact/core) - Core AI Client
 - [@aireact/analytics](https://www.npmjs.com/package/@aireact/analytics) - AI Analytics
 - [@aireact/autosuggest](https://www.npmjs.com/package/@aireact/autosuggest) - AI Suggestions
+- [@aireact/chatbot](https://www.npmjs.com/package/@aireact/chatbot) - AI Chat
+
+### Vue.js (@aivue)
+- [@aivue/smart-datatable](https://www.npmjs.com/package/@aivue/smart-datatable) - Vue Smart DataTable
+- [@aivue/core](https://www.npmjs.com/package/@aivue/core) - Vue Core AI Client
+
+### Angular (@aiangular) - Coming Soon
+- @aiangular/smart-datatable - Angular Smart DataTable
+
+## 🔗 More Information
+
+- [GitHub Repository](https://github.com/reachbrt/AIReact)
+- [Full Documentation](https://github.com/reachbrt/AIReact/wiki)
+- [Report Issues](https://github.com/reachbrt/AIReact/issues)
 
 ## 📄 License
 

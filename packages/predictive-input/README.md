@@ -4,8 +4,12 @@
 
 Intelligent text prediction and completion powered by AI for enhanced typing experiences.
 
-[![npm version](https://img.shields.io/npm/v/@aireact/predictive-input.svg?style=flat-square)](https://www.npmjs.com/package/@aireact/predictive-input)
-[![MIT License](https://img.shields.io/npm/l/@aireact/predictive-input.svg?style=flat-square)](https://github.com/reachbrt/AIReact/blob/main/LICENSE)
+<p>
+  <a href="https://www.npmjs.com/package/@aireact/predictive-input"><img src="https://img.shields.io/npm/v/@aireact/predictive-input.svg?style=flat-square" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/@aireact/predictive-input"><img src="https://img.shields.io/npm/dm/@aireact/predictive-input" alt="npm downloads"></a>
+  <a href="https://github.com/reachbrt/AIReact/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@aireact/predictive-input.svg?style=flat-square" alt="MIT License"></a>
+  <a href="https://github.com/reachbrt/AIReact"><img src="https://img.shields.io/github/stars/reachbrt/AIReact?style=social" alt="GitHub Stars"></a>
+</p>
 
 ## ✨ Features
 
@@ -113,9 +117,23 @@ function CustomPredictive() {
 
 ## 📦 Related Packages
 
+### React (@aireact)
 - [@aireact/core](https://www.npmjs.com/package/@aireact/core) - Core AI Client
 - [@aireact/autosuggest](https://www.npmjs.com/package/@aireact/autosuggest) - AI Suggestions
 - [@aireact/smartform](https://www.npmjs.com/package/@aireact/smartform) - Smart Forms
+
+### Vue.js (@aivue)
+- [@aivue/predictive-input](https://www.npmjs.com/package/@aivue/predictive-input) - Vue Predictive Input
+- [@aivue/core](https://www.npmjs.com/package/@aivue/core) - Vue Core AI Client
+
+### Angular (@aiangular) - Coming Soon
+- @aiangular/predictive-input - Angular Predictive Input
+
+## 🔗 More Information
+
+- [GitHub Repository](https://github.com/reachbrt/AIReact)
+- [Full Documentation](https://github.com/reachbrt/AIReact/wiki)
+- [Report Issues](https://github.com/reachbrt/AIReact/issues)
 
 ## 📄 License
 

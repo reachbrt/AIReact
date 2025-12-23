@@ -4,8 +4,12 @@
 
 Extract, analyze, and understand documents using AI with OCR and document processing.
 
-[![npm version](https://img.shields.io/npm/v/@aireact/doc-intelligence.svg?style=flat-square)](https://www.npmjs.com/package/@aireact/doc-intelligence)
-[![MIT License](https://img.shields.io/npm/l/@aireact/doc-intelligence.svg?style=flat-square)](https://github.com/reachbrt/AIReact/blob/main/LICENSE)
+<p>
+  <a href="https://www.npmjs.com/package/@aireact/doc-intelligence"><img src="https://img.shields.io/npm/v/@aireact/doc-intelligence.svg?style=flat-square" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/@aireact/doc-intelligence"><img src="https://img.shields.io/npm/dm/@aireact/doc-intelligence" alt="npm downloads"></a>
+  <a href="https://github.com/reachbrt/AIReact/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@aireact/doc-intelligence.svg?style=flat-square" alt="MIT License"></a>
+  <a href="https://github.com/reachbrt/AIReact"><img src="https://img.shields.io/github/stars/reachbrt/AIReact?style=social" alt="GitHub Stars"></a>
+</p>
 
 ## ✨ Features
 
@@ -107,9 +111,23 @@ function CustomExtractor() {
 
 ## 📦 Related Packages
 
+### React (@aireact)
 - [@aireact/core](https://www.npmjs.com/package/@aireact/core) - Core AI Client
 - [@aireact/image-caption](https://www.npmjs.com/package/@aireact/image-caption) - Image Captioning
 - [@aireact/analytics](https://www.npmjs.com/package/@aireact/analytics) - AI Analytics
+
+### Vue.js (@aivue)
+- [@aivue/doc-intelligence](https://www.npmjs.com/package/@aivue/doc-intelligence) - Vue Doc Intelligence
+- [@aivue/core](https://www.npmjs.com/package/@aivue/core) - Vue Core AI Client
+
+### Angular (@aiangular) - Coming Soon
+- @aiangular/doc-intelligence - Angular Doc Intelligence
+
+## 🔗 More Information
+
+- [GitHub Repository](https://github.com/reachbrt/AIReact)
+- [Full Documentation](https://github.com/reachbrt/AIReact/wiki)
+- [Report Issues](https://github.com/reachbrt/AIReact/issues)
 
 ## 📄 License
 

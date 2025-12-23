@@ -4,8 +4,12 @@
 
 Multi-provider AI client supporting OpenAI, Claude, Gemini, HuggingFace, Ollama, and DeepSeek with unified API.
 
-[![npm version](https://img.shields.io/npm/v/@aireact/core.svg?style=flat-square)](https://www.npmjs.com/package/@aireact/core)
-[![MIT License](https://img.shields.io/npm/l/@aireact/core.svg?style=flat-square)](https://github.com/reachbrt/AIReact/blob/main/LICENSE)
+<p>
+  <a href="https://www.npmjs.com/package/@aireact/core"><img src="https://img.shields.io/npm/v/@aireact/core.svg?style=flat-square" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/@aireact/core"><img src="https://img.shields.io/npm/dm/@aireact/core" alt="npm downloads"></a>
+  <a href="https://github.com/reachbrt/AIReact/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@aireact/core.svg?style=flat-square" alt="MIT License"></a>
+  <a href="https://github.com/reachbrt/AIReact"><img src="https://img.shields.io/github/stars/reachbrt/AIReact?style=social" alt="GitHub Stars"></a>
+</p>
 
 ## ✨ Features
 
@@ -113,9 +117,25 @@ const {
 
 ## 📦 Related Packages
 
+### React (@aireact)
 - [@aireact/chatbot](https://www.npmjs.com/package/@aireact/chatbot) - AI Chat Components
 - [@aireact/autosuggest](https://www.npmjs.com/package/@aireact/autosuggest) - AI-Powered Suggestions
+- [@aireact/smartform](https://www.npmjs.com/package/@aireact/smartform) - AI Form Validation
+- [@aireact/smart-datatable](https://www.npmjs.com/package/@aireact/smart-datatable) - AI Data Tables
 - [@aireact/360-spin](https://www.npmjs.com/package/@aireact/360-spin) - 360° Product Viewer
+
+### Vue.js (@aivue)
+- [@aivue/core](https://www.npmjs.com/package/@aivue/core) - Vue Core AI Client
+- [@aivue/chatbot](https://www.npmjs.com/package/@aivue/chatbot) - Vue Chat Components
+
+### Angular (@aiangular) - Coming Soon
+- @aiangular/core - Angular Core AI Client
+
+## 🔗 More Information
+
+- [GitHub Repository](https://github.com/reachbrt/AIReact)
+- [Full Documentation](https://github.com/reachbrt/AIReact/wiki)
+- [Report Issues](https://github.com/reachbrt/AIReact/issues)
 
 ## 📄 License
 

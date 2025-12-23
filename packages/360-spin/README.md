@@ -4,8 +4,12 @@
 
 Generate and display 360° product views with AI image generation for e-commerce.
 
-[![npm version](https://img.shields.io/npm/v/@aireact/360-spin.svg?style=flat-square)](https://www.npmjs.com/package/@aireact/360-spin)
-[![MIT License](https://img.shields.io/npm/l/@aireact/360-spin.svg?style=flat-square)](https://github.com/reachbrt/AIReact/blob/main/LICENSE)
+<p>
+  <a href="https://www.npmjs.com/package/@aireact/360-spin"><img src="https://img.shields.io/npm/v/@aireact/360-spin.svg?style=flat-square" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/@aireact/360-spin"><img src="https://img.shields.io/npm/dm/@aireact/360-spin" alt="npm downloads"></a>
+  <a href="https://github.com/reachbrt/AIReact/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@aireact/360-spin.svg?style=flat-square" alt="MIT License"></a>
+  <a href="https://github.com/reachbrt/AIReact"><img src="https://img.shields.io/github/stars/reachbrt/AIReact?style=social" alt="GitHub Stars"></a>
+</p>
 
 ## ✨ Features
 
@@ -150,9 +154,23 @@ function Custom360() {
 
 ## 📦 Related Packages
 
+### React (@aireact)
 - [@aireact/core](https://www.npmjs.com/package/@aireact/core) - Core AI Client
 - [@aireact/image-caption](https://www.npmjs.com/package/@aireact/image-caption) - Image Captioning
 - [@aireact/chatbot](https://www.npmjs.com/package/@aireact/chatbot) - AI Chat
+
+### Vue.js (@aivue)
+- [@aivue/360-spin](https://www.npmjs.com/package/@aivue/360-spin) - Vue 360° Viewer
+- [@aivue/core](https://www.npmjs.com/package/@aivue/core) - Vue Core AI Client
+
+### Angular (@aiangular) - Coming Soon
+- @aiangular/360-spin - Angular 360° Viewer
+
+## 🔗 More Information
+
+- [GitHub Repository](https://github.com/reachbrt/AIReact)
+- [Full Documentation](https://github.com/reachbrt/AIReact/wiki)
+- [Report Issues](https://github.com/reachbrt/AIReact/issues)
 
 ## 📄 License
 

@@ -4,8 +4,12 @@
 
 Generate intelligent captions and descriptions for images using AI vision models.
 
-[![npm version](https://img.shields.io/npm/v/@aireact/image-caption.svg?style=flat-square)](https://www.npmjs.com/package/@aireact/image-caption)
-[![MIT License](https://img.shields.io/npm/l/@aireact/image-caption.svg?style=flat-square)](https://github.com/reachbrt/AIReact/blob/main/LICENSE)
+<p>
+  <a href="https://www.npmjs.com/package/@aireact/image-caption"><img src="https://img.shields.io/npm/v/@aireact/image-caption.svg?style=flat-square" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/@aireact/image-caption"><img src="https://img.shields.io/npm/dm/@aireact/image-caption" alt="npm downloads"></a>
+  <a href="https://github.com/reachbrt/AIReact/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@aireact/image-caption.svg?style=flat-square" alt="MIT License"></a>
+  <a href="https://github.com/reachbrt/AIReact"><img src="https://img.shields.io/github/stars/reachbrt/AIReact?style=social" alt="GitHub Stars"></a>
+</p>
 
 ## ✨ Features
 
@@ -101,9 +105,23 @@ function CustomCaption() {
 
 ## 📦 Related Packages
 
+### React (@aireact)
 - [@aireact/core](https://www.npmjs.com/package/@aireact/core) - Core AI Client
 - [@aireact/360-spin](https://www.npmjs.com/package/@aireact/360-spin) - 360° Product Viewer
 - [@aireact/doc-intelligence](https://www.npmjs.com/package/@aireact/doc-intelligence) - Document AI
+
+### Vue.js (@aivue)
+- [@aivue/image-caption](https://www.npmjs.com/package/@aivue/image-caption) - Vue Image Caption
+- [@aivue/core](https://www.npmjs.com/package/@aivue/core) - Vue Core AI Client
+
+### Angular (@aiangular) - Coming Soon
+- @aiangular/image-caption - Angular Image Caption
+
+## 🔗 More Information
+
+- [GitHub Repository](https://github.com/reachbrt/AIReact)
+- [Full Documentation](https://github.com/reachbrt/AIReact/wiki)
+- [Report Issues](https://github.com/reachbrt/AIReact/issues)
 
 ## 📄 License
 

@@ -4,8 +4,12 @@
 
 Intelligent autocomplete and suggestion system powered by AI for enhanced user input experiences.
 
-[![npm version](https://img.shields.io/npm/v/@aireact/autosuggest.svg?style=flat-square)](https://www.npmjs.com/package/@aireact/autosuggest)
-[![MIT License](https://img.shields.io/npm/l/@aireact/autosuggest.svg?style=flat-square)](https://github.com/reachbrt/AIReact/blob/main/LICENSE)
+<p>
+  <a href="https://www.npmjs.com/package/@aireact/autosuggest"><img src="https://img.shields.io/npm/v/@aireact/autosuggest.svg?style=flat-square" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/@aireact/autosuggest"><img src="https://img.shields.io/npm/dm/@aireact/autosuggest" alt="npm downloads"></a>
+  <a href="https://github.com/reachbrt/AIReact/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@aireact/autosuggest.svg?style=flat-square" alt="MIT License"></a>
+  <a href="https://github.com/reachbrt/AIReact"><img src="https://img.shields.io/github/stars/reachbrt/AIReact?style=social" alt="GitHub Stars"></a>
+</p>
 
 ## ✨ Features
 
@@ -101,9 +105,24 @@ function CustomAutosuggest() {
 
 ## 📦 Related Packages
 
+### React (@aireact)
 - [@aireact/core](https://www.npmjs.com/package/@aireact/core) - Core AI Client
 - [@aireact/chatbot](https://www.npmjs.com/package/@aireact/chatbot) - AI Chat
 - [@aireact/predictive-input](https://www.npmjs.com/package/@aireact/predictive-input) - Predictive Text
+- [@aireact/smartform](https://www.npmjs.com/package/@aireact/smartform) - AI Form Validation
+
+### Vue.js (@aivue)
+- [@aivue/autosuggest](https://www.npmjs.com/package/@aivue/autosuggest) - Vue Autosuggest
+- [@aivue/core](https://www.npmjs.com/package/@aivue/core) - Vue Core AI Client
+
+### Angular (@aiangular) - Coming Soon
+- @aiangular/autosuggest - Angular Autosuggest
+
+## 🔗 More Information
+
+- [GitHub Repository](https://github.com/reachbrt/AIReact)
+- [Full Documentation](https://github.com/reachbrt/AIReact/wiki)
+- [Report Issues](https://github.com/reachbrt/AIReact/issues)
 
 ## 📄 License
 

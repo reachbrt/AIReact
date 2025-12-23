@@ -9,8 +9,15 @@
   <p>
     <a href="https://www.npmjs.com/package/@aireact/core"><img src="https://img.shields.io/npm/v/@aireact/core.svg?style=for-the-badge&logo=npm&logoColor=white&color=CB3837" alt="npm version"></a>
     <a href="https://github.com/reachbrt/AIReact/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@aireact/core.svg?style=for-the-badge&color=green" alt="MIT License"></a>
-    <a href="https://github.com/reachbrt/AIReact/stargazers"><img src="https://img.shields.io/github/stars/reachbrt/reactai?style=for-the-badge&logo=github&color=yellow" alt="GitHub Stars"></a>
-    <a href="https://github.com/reachbrt/AIReact/network/members"><img src="https://img.shields.io/github/forks/reachbrt/reactai?style=for-the-badge&logo=github&color=blue" alt="GitHub Forks"></a>
+    <a href="https://github.com/reachbrt/AIReact/stargazers"><img src="https://img.shields.io/github/stars/reachbrt/AIReact?style=for-the-badge&logo=github&color=yellow" alt="GitHub Stars"></a>
+    <a href="https://github.com/reachbrt/AIReact/network/members"><img src="https://img.shields.io/github/forks/reachbrt/AIReact?style=for-the-badge&logo=github&color=blue" alt="GitHub Forks"></a>
+  </p>
+
+  <!-- Secondary Badges -->
+  <p>
+    <a href="https://www.npmjs.com/package/@aireact/core"><img src="https://img.shields.io/npm/dm/@aireact/core?style=flat-square&logo=npm&label=npm%20downloads" alt="npm downloads"></a>
+    <a href="https://github.com/reachbrt/AIReact/issues"><img src="https://img.shields.io/github/issues/reachbrt/AIReact?style=flat-square&logo=github" alt="GitHub Issues"></a>
+    <a href="https://github.com/reachbrt/AIReact/pulls"><img src="https://img.shields.io/github/issues-pr/reachbrt/AIReact?style=flat-square&logo=github" alt="GitHub Pull Requests"></a>
   </p>
 
   <!-- Technology Badges -->
@@ -23,11 +30,22 @@
     <img src="https://img.shields.io/badge/Ollama-Supported-000000?style=flat-square&logo=ollama&logoColor=white" alt="Ollama">
   </p>
 
+  <!-- Social & Community Badges -->
+  <p>
+    <a href="https://github.com/reachbrt/AIReact/watchers"><img src="https://img.shields.io/github/watchers/reachbrt/AIReact?style=social" alt="GitHub Watchers"></a>
+    <a href="https://twitter.com/intent/tweet?text=Check%20out%20@aireact%20-%2013%20AI-powered%20React%20components!&url=https://github.com/reachbrt/AIReact"><img src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Freachbrt%2FAIReact" alt="Tweet"></a>
+  </p>
+
   <!-- Quick Links -->
   <p>
     <a href="#-quick-start"><img src="https://img.shields.io/badge/⚡_Quick_Start-Begin-95E1D3?style=for-the-badge" alt="Quick Start"></a>
-    <a href="#-component-packages"><img src="https://img.shields.io/badge/📦_Packages-View-4ECDC4?style=for-the-badge" alt="Packages"></a>
+    <a href="https://github.com/reachbrt/AIReact/wiki" target="_blank"><img src="https://img.shields.io/badge/📚_Documentation-Read-4ECDC4?style=for-the-badge" alt="Documentation"></a>
     <a href="https://github.com/reachbrt/AIReact/issues/new"><img src="https://img.shields.io/badge/🐛_Report_Bug-Submit-F7B731?style=for-the-badge" alt="Report Bug"></a>
+  </p>
+
+  <!-- Sponsor/Support -->
+  <p>
+    <a href="https://github.com/sponsors/reachbrt"><img src="https://img.shields.io/badge/💖_Sponsor-Support%20Development-EA4AAA?style=for-the-badge" alt="Sponsor"></a>
   </p>
 
   ---
@@ -35,7 +53,7 @@
   <h3>⭐ If you find this project useful, please consider giving it a star! ⭐</h3>
 
   <p>
-    <em>Built with ❤️ by <a href="https://github.com/reachbrt">reachbrt</a></em>
+    <em>Built with ❤️ by <a href="https://github.com/reachbrt">reachbrt</a> | Mentored by <a href="https://www.instagram.com/the_ai_dude/?hl=en">Manoj</a></em>
   </p>
 </div>
 
@@ -46,53 +64,53 @@ A modular AI-powered React component suite that enhances your applications with 
 <table>
   <tr>
     <td align="center" width="16.66%">
-      <b>@aireact/chatbot</b><br>
+      <a href="https://www.npmjs.com/package/@aireact/chatbot"><b>@aireact/chatbot</b></a><br>
       <small>Multi-provider AI chat widget</small>
     </td>
     <td align="center" width="16.66%">
-      <b>@aireact/autosuggest</b><br>
+      <a href="https://www.npmjs.com/package/@aireact/autosuggest"><b>@aireact/autosuggest</b></a><br>
       <small>Smart autosuggest with semantic ranking</small>
     </td>
     <td align="center" width="16.66%">
-      <b>@aireact/smartform</b><br>
+      <a href="https://www.npmjs.com/package/@aireact/smartform"><b>@aireact/smartform</b></a><br>
       <small>AI-enhanced forms with dynamic validation</small>
     </td>
     <td align="center" width="16.66%">
-      <b>@aireact/image-caption</b><br>
+      <a href="https://www.npmjs.com/package/@aireact/image-caption"><b>@aireact/image-caption</b></a><br>
       <small>AI-powered image captioning</small>
     </td>
     <td align="center" width="16.66%">
-      <b>@aireact/emotion-ui</b><br>
+      <a href="https://www.npmjs.com/package/@aireact/emotion-ui"><b>@aireact/emotion-ui</b></a><br>
       <small>Emotion-aware UI components</small>
     </td>
     <td align="center" width="16.66%">
-      <b>@aireact/doc-intelligence</b><br>
+      <a href="https://www.npmjs.com/package/@aireact/doc-intelligence"><b>@aireact/doc-intelligence</b></a><br>
       <small>Document processing with OCR</small>
     </td>
   </tr>
   <tr>
     <td align="center" width="16.66%">
-      <b>@aireact/predictive-input</b><br>
+      <a href="https://www.npmjs.com/package/@aireact/predictive-input"><b>@aireact/predictive-input</b></a><br>
       <small>AI-powered text predictions</small>
     </td>
     <td align="center" width="16.66%">
-      <b>@aireact/smart-notify</b><br>
+      <a href="https://www.npmjs.com/package/@aireact/smart-notify"><b>@aireact/smart-notify</b></a><br>
       <small>Intelligent notifications</small>
     </td>
     <td align="center" width="16.66%">
-      <b>@aireact/voice-actions</b><br>
+      <a href="https://www.npmjs.com/package/@aireact/voice-actions"><b>@aireact/voice-actions</b></a><br>
       <small>Voice command integration</small>
     </td>
     <td align="center" width="16.66%">
-      <b>@aireact/analytics</b><br>
+      <a href="https://www.npmjs.com/package/@aireact/analytics"><b>@aireact/analytics</b></a><br>
       <small>AI-powered analytics</small>
     </td>
     <td align="center" width="16.66%">
-      <b>@aireact/smart-datatable</b><br>
+      <a href="https://www.npmjs.com/package/@aireact/smart-datatable"><b>@aireact/smart-datatable</b></a><br>
       <small>AI-native data table</small>
     </td>
     <td align="center" width="16.66%">
-      <b>@aireact/360-spin</b><br>
+      <a href="https://www.npmjs.com/package/@aireact/360-spin"><b>@aireact/360-spin</b></a><br>
       <small>360° product viewer with AI generation</small>
     </td>
   </tr>
@@ -154,9 +172,13 @@ Built with React 18, TypeScript, Vite, and modern hooks. Optimized for performan
 | Metric | Value |
 |--------|-------|
 | 📦 **Total Packages** | 13 packages |
-| ⭐ **GitHub Stars** | ![GitHub Stars](https://img.shields.io/github/stars/reachbrt/reactai?style=social) |
-| 🍴 **Forks** | ![GitHub Forks](https://img.shields.io/github/forks/reachbrt/reactai?style=social) |
-| 🐛 **Open Issues** | ![GitHub Issues](https://img.shields.io/github/issues/reachbrt/reactai) |
+| 🚀 **Published on npm** | 13 packages |
+| ⭐ **GitHub Stars** | ![GitHub Stars](https://img.shields.io/github/stars/reachbrt/AIReact?style=social) |
+| 🍴 **Forks** | ![GitHub Forks](https://img.shields.io/github/forks/reachbrt/AIReact?style=social) |
+| 📥 **npm Downloads** | ![npm](https://img.shields.io/npm/dt/@aireact/core) |
+| 🐛 **Open Issues** | ![GitHub Issues](https://img.shields.io/github/issues/reachbrt/AIReact) |
+| ✅ **Closed Issues** | ![GitHub Closed Issues](https://img.shields.io/github/issues-closed/reachbrt/AIReact) |
+| 🔄 **Pull Requests** | ![GitHub PRs](https://img.shields.io/github/issues-pr/reachbrt/AIReact) |
 | 📝 **License** | MIT |
 
 </div>
@@ -503,17 +525,91 @@ Contributions are welcome! Please read our contributing guide before submitting 
 
 ## 🔗 Related Projects
 
+<div align="center">
+
+Interested in AI components for other frameworks?
+
 | Framework | Repository | Status |
 |-----------|-----------|--------|
-| **Vue.js** | [vueai](https://github.com/reachbrt/vueai) | ✅ Published |
-| **Angular** | [angularai](https://github.com/reachbrt/angularai) | 🚧 Coming Soon |
-| **Svelte** | [svelteai](https://github.com/reachbrt/svelteai) | 💡 Planned |
+| **Vue.js** | [@aivue](https://github.com/reachbrt/vueai) | ✅ Published |
+| **React** | [@aireact](https://github.com/reachbrt/AIReact) | ✅ Published |
+| **Angular** | [@aiangular](https://github.com/reachbrt/angularai) | 🚧 Coming Soon |
+| **Svelte** | [@aisvelte](https://github.com/reachbrt/svelteai) | 💡 Planned |
+
+</div>
+
+---
+
+## 🎁 Support This Project
+
+<div align="center">
+
+If you find @aireact useful, please consider supporting the project:
+
+<table>
+<tr>
+<td align="center" width="33%">
+
+### ⭐ **Star on GitHub**
+Give us a star to show your support!
+
+[![GitHub Stars](https://img.shields.io/github/stars/reachbrt/AIReact?style=social)](https://github.com/reachbrt/AIReact/stargazers)
+
+</td>
+<td align="center" width="33%">
+
+### 💖 **Sponsor**
+Support ongoing development
+
+[![Sponsor](https://img.shields.io/badge/Sponsor-❤️-EA4AAA?style=for-the-badge)](https://github.com/sponsors/reachbrt)
+
+</td>
+<td align="center" width="33%">
+
+### 🐦 **Share**
+Spread the word!
+
+[![Tweet](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Freachbrt%2FAIReact)](https://twitter.com/intent/tweet?text=Check%20out%20@aireact%20-%2013%20AI-powered%20React%20components!&url=https://github.com/reachbrt/AIReact)
+
+</td>
+</tr>
+</table>
+
+</div>
 
 ---
 
 ## 📄 License
 
+<div align="center">
+
 **MIT License** © 2025 [Bharatkumar Subramanian](https://github.com/reachbrt)
+
+[![License](https://img.shields.io/npm/l/@aireact/core.svg?style=for-the-badge&color=green)](https://github.com/reachbrt/AIReact/blob/main/LICENSE)
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+### 👨‍💻 **Author & Maintainer**
+
+<table>
+<tr>
+<td align="center">
+<img src="https://github.com/reachbrt.png" width="100" height="100" style="border-radius: 50%"><br>
+<strong>Bharatkumar Subramanian</strong><br>
+<a href="https://github.com/reachbrt">GitHub</a> •
+<a href="https://www.linkedin.com/in/bharatkumarsubramanian/">LinkedIn</a> •
+<a href="mailto:reachbrt@gmail.com">Email</a>
+</td>
+</tr>
+</table>
+
+### 🙏 **Special Thanks**
+
+Huge gratitude to my mentor who guided me through this journey:
+
+- **[Manoj (@the_ai_dude)](https://www.instagram.com/the_ai_dude/?hl=en)** - Main guidance and mentorship
+
+</div>
 
 ---
 
@@ -525,6 +621,7 @@ Contributions are welcome! Please read our contributing guide before submitting 
   <strong>If this project helped you, please consider:</strong><br>
   ⭐ Starring the repository<br>
   🐦 Sharing on social media<br>
+  💖 Sponsoring the project<br>
   🤝 Contributing to the codebase
 </p>
 
